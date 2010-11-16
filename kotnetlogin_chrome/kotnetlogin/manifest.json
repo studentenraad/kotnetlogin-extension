@@ -1,0 +1,33 @@
+{
+  "name": "Kotnet Login",
+  "version": "1.0",
+  "description": "Kotnet Login is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...",
+  "background_page": "background.html",
+  "browser_action": {
+      "default_title": "Kotnet Login"
+   },
+   "icons": {
+      "32" : "icon_32.png",
+      "48" : "icon_48.png",
+      "128": "icon.png"
+   },
+  "content_scripts": [
+    {
+      "matches": ["http://netlogin.kuleuven.be/*", "https://netlogin.kuleuven.be/*"],
+      "run_at": "document_idle",
+      "js": ["netlogin.js"]
+    },
+    {
+      "matches": ["https://cas.kuleuven.be/cas/login*"],
+      "run_at": "document_idle",
+      "js": ["shibboleth.js"]
+    },
+    {
+      "matches": ["https://idp.groept.be/idp/view/login.htm"],
+      "run_at": "document_idle",
+      "js": ["groept.js"]
+    }
+  ],
+  "options_page": "options.html",
+  "permissions": ["tabs"]
+}

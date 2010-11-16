@@ -1,0 +1,135 @@
+<html>
+<head>
+<title>Google Mail Checker - Options</title>
+<style>
+body {
+  font-family:helvetica, arial, sans-serif;
+  font-size:80%;
+  margin:10px;
+}
+
+#header {
+  padding-bottom:1.5em;
+  padding-top:1.5em;
+}
+
+#header h1 {
+  font-size: 156%;
+  display:inline;
+  padding-bottom:43px;
+  padding-left:75px;
+  padding-top:40px;
+  background:url(icon.png) no-repeat;
+  background-size:67px;
+  background-position:1px 18px;
+}
+
+.section-header {
+  background:#ebeff9;
+  border-top:1px solid #b5c7de;
+  font-size:99%;
+  padding:3px 0 2px 5px;
+  font-weight:bold;
+  margin-bottom:1em;
+  margin-top:4em;
+}
+
+.section-header.first {
+  margin-top:1em;
+}
+
+#custom-domain {
+  width:300px;
+  margin-left:2px;
+}
+
+#footer {
+  margin-top:4em;
+}
+</style>
+</head>
+<body>
+
+<div id="header"><h1>Kotnet Login Opties</h1></div>
+
+<div class="section-header first">Login gegevens</div>
+<p>Vul je gebruikersnaam (bv. s1234567) en wachtwoord in.
+<p>
+<table>
+<tr>
+	<td><label>Gebruikersnaam: </label></td>
+	<td><input type="text" id="username" oninput="markDirty()"></td>
+</tr>
+<tr>
+	<td><label>Wachtwoord: </label></td>
+	<td><input type="password" id="password" oninput="markDirty()"></td>
+</tr>
+<tr>
+	<td><label>Instelling: </label></td>
+	<td>
+	   <select name="institute" id="institute" onchange="markDirty()" />
+	      <option value="groept-aid">GroepT</option> 
+	      <option value="hubrussel-aid">HUBrussel</option> 
+	      <option value="katho-aid">KATHO</option> 
+	      <option value="khbo-aid">KHBO</option> 
+	      <option value="khleuven">KHLeuven</option> 
+	      <option value="khlim">KHLim</option> 
+	      <option value="kuleuven">K.U.Leuven</option> 
+	      <option value="lessius-aid">Lessius Antwerpen</option> 
+	      <option value="khm-aid">Lessius Mechelen</option> 
+	      <option value="sintlukas-aid">Sint Lukas</option> 
+	      <option value="wenk-aid">W&amp;K</option> 
+	      <option value="kotnetext">KotNet Extern</option> 
+	  </select>
+	</td>
+</tr>
+</table>
+
+<div id="footer">
+  <button id="save-button" style="font-weight:bold" onclick="save()">Opslaan</button>
+  <button id="reset-button" onclick="window.close()">Annuleren</button>
+</div>
+
+<script>
+var username;
+var password;
+var institute;
+var saveButton;
+var resetButton;
+
+init();
+
+function init() {
+  username = document.getElementById("username");
+  password = document.getElementById("password");
+  institute = document.getElementById("institute");
+  saveButton = document.getElementById("save-button");
+  resetButton = document.getElementById("reset-button");
+
+  username.value  = localStorage.user || "";
+  password.value  = localStorage.pass || "";
+  institute.value = localStorage.inst || "kuleuven";
+  markClean();
+}
+
+function save() {
+  var wasNull = (localStorage.active == null);
+  localStorage.user = username.value;
+  localStorage.pass = password.value;
+  localStorage.inst = institute.value;
+  if (wasNull) localStorage.active = 1;
+  chrome.extension.getBackgroundPage().init();
+  window.close();
+  markClean();
+}
+
+function markDirty() {
+  saveButton.disabled = false;
+}
+
+function markClean() {
+  saveButton.disabled = true;
+}
+</script>
+</body>
+</html>
