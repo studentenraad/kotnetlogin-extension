@@ -1,6 +1,6 @@
 {
   "name": "Kotnet Login",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Kotnet Login is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...",
   "background_page": "background.html",
   "browser_action": {
