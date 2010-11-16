@@ -1,0 +1,35 @@
+<script>
+chrome.extension.onRequest.addListener(
+  function(request, sender, sendResponse) {
+    if (request.name == 'info') 
+      sendResponse({user : localStorage.user, pass : localStorage.pass, inst : localStorage.inst, active : localStorage.active})
+  });
+	  
+chrome.browserAction.onClicked.addListener(function(tab) {
+  if (localStorage.active == 1) localStorage.active = 0;
+  else if (localStorage.active == 0) localStorage.active = 1;
+	
+  init();
+});
+
+function init() {
+  if (localStorage.inst == null)
+    localStorage.inst = "kuleuven"
+
+  if (localStorage.active == 0) {
+    chrome.browserAction.setIcon({path: "icon.png"});
+    chrome.browserAction.setBadgeText({text: 'uit'});
+  }
+  else if (localStorage.active == 1) {
+    chrome.browserAction.setIcon({path: "icon.png"});
+    chrome.browserAction.setBadgeText({text: ''});
+  }
+  else {
+    chrome.browserAction.setIcon({path: "icon.png"});
+    chrome.browserAction.setBadgeText({text: 'uit'});
+    chrome.tabs.create({url : chrome.extension.getURL("options.html")});
+  }
+}
+
+init();
+</script>
