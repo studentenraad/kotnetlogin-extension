@@ -18,7 +18,7 @@
       "js": ["netlogin.js"]
     },
     {
-      "matches": ["https://cas.kuleuven.be/cas/login*"],
+      "matches": ["https://idp.kuleuven.be/idp/view/login.htm"],
       "run_at": "document_idle",
       "js": ["shibboleth.js"]
     },
