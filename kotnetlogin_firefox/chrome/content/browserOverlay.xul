@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<overlay id="kotnetlogin_overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/inst.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/pwmanager.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/prefmanager.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/bot.js" />
+
+<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/migration.js" />
+
+<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/observer.js" />
+
+</overlay>
