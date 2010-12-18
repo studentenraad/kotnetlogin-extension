@@ -11,7 +11,7 @@
 		<em:homepageURL>https://code.google.com/p/kotnetloginextension/</em:homepageURL>
 		<em:optionsURL>chrome://kotnetlogin/content/options.xul</em:optionsURL>
 		<em:aboutURL>chrome://kotnetlogin/content/about.xul</em:aboutURL>
-		<em:updateURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/install.rdf</em:updateURL>
+		<em:updateURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/update.rdf</em:updateURL>
 		<em:type>2</em:type>
 
         <!-- Firefox -->
