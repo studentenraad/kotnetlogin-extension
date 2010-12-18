@@ -14,7 +14,7 @@
 								<em:maxVersion>3.6.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_0.4.5.xpi</em:updateLink>
 								<em:updateHash>sha1:aebcd91674d70b4165952137a32f214d1f53353b</em:updateHash>
-								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_0.4.5.xhtml</em:updateInfoURL>
+								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_0.4.5.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
 					</RDF:Description>
