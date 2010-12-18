@@ -6,15 +6,15 @@
 			<RDF:Seq>
 				<RDF:li>
 					<RDF:Description>
-						<em:version>0.4.5</em:version>
+						<em:version>1.0.0</em:version>
 						<em:targetApplication>
 							<RDF:Description>
 								<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>3.6.*</em:maxVersion>
-								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_0.4.5.xpi</em:updateLink>
-								<em:updateHash>sha1:9953b60cbf44f75e49ee463d28d17611e214772a</em:updateHash>
-								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_0.4.5.xml</em:updateInfoURL>
+								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_1.0.0.xpi</em:updateLink>
+								<em:updateHash>sha1:56828a2e891d1b07785765d2847fa42317d1a531</em:updateHash>	
+								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.0.0.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
 					</RDF:Description>
