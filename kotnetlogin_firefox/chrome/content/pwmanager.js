@@ -3,7 +3,7 @@ var nsLoginInfo = new Components.Constructor("@mozilla.org/login-manager/loginIn
 
 var PwManager = {
   passwordManager : Components.classes["@mozilla.org/login-manager;1"].getService(Components.interfaces.nsILoginManager),
-  host : 'chrome://kotnetlogin.stijnvermeeren.be',
+  host : 'chrome://kotnetlogin',
   realm : 'Automatische Kotnet login',
 
   save : function(user, password) {

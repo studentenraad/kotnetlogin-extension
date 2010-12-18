@@ -7,8 +7,8 @@
      onunload="save();"
      onload="load();">
 
-<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/prefmanager.js" />
-<script type="application/x-javascript" src="chrome://kotnetlogin.stijnvermeeren.be/content/pwmanager.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/prefmanager.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/pwmanager.js" />
 <script type="text/javascript"><![CDATA[
 function load() {
   var key = PwManager.load();
