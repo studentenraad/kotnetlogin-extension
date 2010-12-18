@@ -6,30 +6,30 @@
 			<RDF:Seq>
 				<RDF:li>
 					<RDF:Description>
-						<em:version>0.4.4</em:version>
-						<em:targetApplication>
-							<RDF:Description>
-								<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-								<em:minVersion>3.0</em:minVersion>
-								<em:maxVersion>3.6.*</em:maxVersion>
-								<em:updateLink>http://kotnetloginextension.googlecode.com/files/kotnetlogin_0.4.4.xpi</em:updateLink>
-								<em:updateHash>sha1:fd906c7916187c07127c129d14a93f9bd4cfc3f4</em:updateHash>
-								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_0.4.4.xhtml</em:updateInfoURL>
-							</RDF:Description>
-						</em:targetApplication>
-					</RDF:Description>
-				</RDF:li>
-				<RDF:li>
-					<RDF:Description>
 						<em:version>0.4.5</em:version>
 						<em:targetApplication>
 							<RDF:Description>
 								<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>3.6.*</em:maxVersion>
-								<em:updateLink>http://kotnetloginextension.googlecode.com/files/kotnetlogin_0.4.5.xpi</em:updateLink>
+								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_0.4.5.xpi</em:updateLink>
 								<em:updateHash>sha1:aebcd91674d70b4165952137a32f214d1f53353b</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_0.4.5.xhtml</em:updateInfoURL>
+							</RDF:Description>
+						</em:targetApplication>
+					</RDF:Description>
+				</RDF:li>
+				<RDF:li>
+					<RDF:Description>
+						<em:version>0.4.4</em:version>
+						<em:targetApplication>
+							<RDF:Description>
+								<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+								<em:minVersion>3.0</em:minVersion>
+								<em:maxVersion>3.6.*</em:maxVersion>
+								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_0.4.4.xpi</em:updateLink>
+								<em:updateHash>sha1:fd906c7916187c07127c129d14a93f9bd4cfc3f4</em:updateHash>
+								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_0.4.4.xhtml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
 					</RDF:Description>
