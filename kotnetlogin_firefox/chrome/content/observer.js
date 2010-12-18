@@ -8,7 +8,7 @@ var UrlObserver = {
     	if (href.indexOf('//netlogin.kuleuven.be') != -1 && Instelling.hasKotnet(inst)) {
     	  Bot.netlogin(doc);
     	}
-    	else if (href.indexOf('https://cas.kuleuven.be/cas/login') != -1) {
+    	else if (href.indexOf('https://idp.kuleuven.be/idp/view/login.htm') != -1) {
     	  Bot.shibboleth(doc);
     	}
     	else if (href.indexOf('https://cygnus.cc.kuleuven.be/webapps/portal/tab/_12_1/index.jsp') != -1 && Instelling.hasToledo(inst)) {
