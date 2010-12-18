@@ -5,15 +5,8 @@ if (PrefManager.getInst() == 'kubrussel-pers' || PrefManager.getInst() == 'kubru
 
 
 var extensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
-if (extensionManager.getInstallLocation("kotnetlogin@stijnshome.be")) {
-  if (PrefManager.prefInterface.getPrefType('uid') != 0 && PrefManager.prefInterface.getPrefType('pwd') != 0) {
-    user = PrefManager.prefInterface.getCharPref('uid');
-    pw = PrefManager.prefInterface.getCharPref('pwd');
-    PwManager.save(user, pw);
-  }
-  
-  extensionManager.uninstallItem("kotnetlogin@stijnshome.be");
-  
+if (extensionManager.getInstallLocation("kotnetlogin@pmylemans.blogspot.com")) {
+  extensionManager.uninstallItem("kotnetlogin@pmylemans.blogspot.com");  
   window.top.addEventListener('focus',kotnetlogin_shutdownold,true);
 }
 

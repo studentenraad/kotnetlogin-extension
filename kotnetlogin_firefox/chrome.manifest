@@ -1,2 +1,2 @@
-content	kotnetlogin.stijnvermeeren.be	chrome/content/
-overlay	chrome://browser/content/browser.xul	chrome://kotnetlogin.stijnvermeeren.be/content/browserOverlay.xul
+content	kotnetlogin	chrome/content/
+overlay	chrome://browser/content/browser.xul	chrome://kotnetlogin/content/browserOverlay.xul
