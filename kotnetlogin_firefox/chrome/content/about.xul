@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://kotnetlogin.stijnvermeeren.be/content/about.css" type="text/css"?>
+<window class="dialog"
+	title="Kotnet login - About"
+	orient="vertical"
+	autostretch="always"
+	onload="sizeToContent()"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="text/javascript">
+<![CDATA[
+function openUrl(url) {
+  var wm = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                   .getService(Components.interfaces.nsIWindowMediator);
+  var mainWindow = wm.getMostRecentWindow("navigator:browser");
+  mainWindow.getBrowser().selectedTab = mainWindow.getBrowser().addTab(url);
+}
+]]>
+</script>
+
+<groupbox align="center" orient="horizontal">
+<vbox>
+  <text value="Kotnet login" style="font-weight: bold; font-size: x-large;"/>
+  <text value="Versie 0.4.3 - 24 januari 2010"/>
+  <text value="Te gebruiken op eigen risico!"/>
+  <separator class="thin"/>
+  <text value="Door:" style="font-weight: bold;"/>
+  <text value="Stijn Vermeeren"/>
+  <text value="Peter Mylemans"/>
+
+  <separator class="thin"/>
+</vbox>
+</groupbox>
+
+  <hbox>
+  <spacer flex="1"/>
+
+   <button label="Close" oncommand="window.close();"/>
+  </hbox>
+
+</window>
