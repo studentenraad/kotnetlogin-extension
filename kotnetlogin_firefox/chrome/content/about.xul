@@ -22,7 +22,7 @@ function openUrl(url) {
 <groupbox align="center" orient="horizontal">
 <vbox>
   <text value="Kotnet login" style="font-weight: bold; font-size: x-large;"/>
-  <text value="Versie 1.0.0 - 18 december 2010"/>
+  <text value="Versie 1.0.1 - 3 april 2011"/>
   <text value="Te gebruiken op eigen risico!"/>
   <separator class="thin"/>
   <text value="Door:" style="font-weight: bold;"/>
