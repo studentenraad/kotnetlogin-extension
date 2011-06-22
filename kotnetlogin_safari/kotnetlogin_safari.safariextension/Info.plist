@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Albert Jorissen</string>
+	<key>Builder Version</key>
+	<string>7534.45</string>
+	<key>CFBundleDisplayName</key>
+	<string>kotnetlogin_safari</string>
+	<key>CFBundleIdentifier</key>
+	<string>kotnetloginextension</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>settings.html</string>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>login.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>redirect.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Allowed Domains</key>
+			<array>
+				<string>*.kuleuven.be</string>
+			</array>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>Some</string>
+		</dict>
+	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://kotnetloginextension.googlecode.com/hg/updates.plist</string>
+	<key>Website</key>
+	<string>http://kotnetloginextension.googlecode.com</string>
+</dict>
+</plist>
