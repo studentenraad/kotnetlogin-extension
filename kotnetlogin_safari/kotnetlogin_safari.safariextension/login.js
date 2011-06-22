@@ -30,8 +30,8 @@ function login(event){
 		// Extract username and password
 		var username = event.message.username;
 		var password = event.message.password;
-		if(username == '' || password == ''){
-			alert('Kotnet Login kan je automatisch inloggen op deze pagina.\nGelieve je gebruikersnaam en wachtwoord in te geven in de instellingen.')
+		if(username == undefined || password == undefined){
+			alert('Kotnet Login kan je automatisch inloggen op deze pagina.\nGelieve daar voor wel eerst je login-gegevens in te vullen in de instellingen.')
 			return;
 		}
 		// Fetch form and form input fields
