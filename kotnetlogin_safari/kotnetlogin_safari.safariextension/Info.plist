@@ -7,7 +7,7 @@
 	<key>Builder Version</key>
 	<string>7534.45</string>
 	<key>CFBundleDisplayName</key>
-	<string>kotnetlogin_safari</string>
+	<string>Kotnet Login</string>
 	<key>CFBundleIdentifier</key>
 	<string>kotnetloginextension</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -35,6 +35,8 @@
 			</array>
 		</dict>
 	</dict>
+	<key>Description</key>
+	<string>Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
