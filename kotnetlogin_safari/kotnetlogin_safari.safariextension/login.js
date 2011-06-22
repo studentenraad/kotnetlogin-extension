@@ -1,7 +1,3 @@
-/**
-
-*/
-
 // Variable to keep the current page
 var page = null;
 
@@ -34,6 +30,10 @@ function login(event){
 		// Extract username and password
 		var username = event.message.username;
 		var password = event.message.password;
+		if(username == '' || password == ''){
+			alert('Kotnet Login kan je automatisch inloggen op deze pagina.\nGelieve je gebruikersnaam en wachtwoord in te geven in de instellingen.')
+			return;
+		}
 		// Fetch form and form input fields
 		data = pages[page]();
 		// Fill in the fields

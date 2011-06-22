@@ -17,6 +17,7 @@ function redirect(event){
 		}
 		// Extract institute name
 		var institute = event.message;
+		alert(institute);
 		// Redirect
 		document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf.pl?inst=' + institute + '&lang=nl&submit=Ga+verder+%2F+Continue';
 }
