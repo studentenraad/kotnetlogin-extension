@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Key</key>
+		<string>username</string>
+		<key>Password</key>
+		<false/>
+		<key>Secure</key>
+		<true/>
+		<key>Title</key>
+		<string>Login</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>Key</key>
+		<string>password</string>
+		<key>Password</key>
+		<true/>
+		<key>Secure</key>
+		<true/>
+		<key>Title</key>
+		<string>Wachtwoord</string>
+		<key>Type</key>
+		<string>TextField</string>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>kuleuven</string>
+		<key>Key</key>
+		<string>institute</string>
+		<key>Secure</key>
+		<false/>
+		<key>Title</key>
+		<string>Instelling</string>
+		<key>Titles</key>
+		<array>
+			<string>K.U.Leuven</string>
+		</array>
+		<key>Type</key>
+		<string>PopUpButton</string>
+		<key>Values</key>
+		<array>
+			<string>kuleuven</string>
+		</array>
+	</dict>
+</array>
+</plist>

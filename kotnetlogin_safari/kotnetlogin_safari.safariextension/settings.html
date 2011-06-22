@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>global HTML page</title>
+<script type="text/javascript">
+
+// Send the requested info back to the requester
+function sendSettings(event) {
+	var response = null;
+	
+	if(event.message == 'institute'){
+		// Read the institute from the settings
+		response = safari.extension.settings.institute;
+	} else if (event.message == 'credentials'){
+		response = new Object();
+		// Read the username and pass from the settings
+		response.username = safari.extension.secureSettings.username;
+		response.password = safari.extension.secureSettings.password;
+	}
+	// Send the requested data back, using the name of the requested data as name for the response
+	event.target.page.dispatchMessage(event.message, response);
+}
+
+// Listen for messages and pass them to the sendSettings function
+safari.application.addEventListener("message",sendSettings,false);
+
+</script>
+</head>
+<body>
+</body>
+</html>
