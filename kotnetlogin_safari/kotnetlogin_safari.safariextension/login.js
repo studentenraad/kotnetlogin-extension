@@ -4,6 +4,7 @@ var page = null;
 // mapping between hostnames and functions to fetch form information
 var pages = {
 	'idp.kuleuven.be': getShibbolethForm,
+	'idp.groept.be': getShibbolethForm,
 	'netlogin.kuleuven.be' : getNetloginForm
 }
 
