@@ -32,7 +32,7 @@ function login(event){
 		var username = event.message.username;
 		var password = event.message.password;
 		if(username == undefined || password == undefined){
-			alert('Kotnet Login kan je automatisch inloggen op deze pagina.\nGelieve daar voor wel eerst je login-gegevens in te vullen in de instellingen.')
+			alert('Kotnet Login kan je automatisch inloggen op deze pagina.\nGelieve daarvoor wel eerst je login-gegevens in te vullen in de instellingen.')
 			return;
 		}
 		// Fetch form and form input fields
