@@ -9,7 +9,9 @@ if(document.location.host == 'toledo.kuleuven.be') {
 // Redirect to login when visiting http(s)://netlogin.kuleuven.be
 if(document.location.host == 'netlogin.kuleuven.be') {
 	// Request institute from settings
-	safari.self.tab.dispatchMessage("getInfo",REDIRECT_KEY);
+	if(document.location.href.indexOf('wayf.pl') == -1){
+		safari.self.tab.dispatchMessage("getInfo",REDIRECT_KEY);
+	}
 }
 
 // Redirect when the institute is passed
