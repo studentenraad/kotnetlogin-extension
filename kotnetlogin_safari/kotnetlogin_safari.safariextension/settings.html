@@ -4,8 +4,30 @@
 <title>global HTML page</title>
 <script type="text/javascript">
 
+// Counter to prevent loops of failing logins
+var counter = 0;
+
+// Reset the counter
+function resetCounter(){
+	counter = 0;
+}
+// Reset the counter when settings are changed
+safari.extension.settings.addEventListener("change", resetCounter, false);
+// Reset the counter every minute
+setInterval("resetCounter()",60000);
+
 // Send the requested info back to the requester
 function sendSettings(event) {
+	
+	// Check if we requested the credentials/institute too many times
+	if(counter >= 5){
+		// We did, send an error instead of the requested info.
+		event.target.page.dispatchMessage('error', null);
+		return;
+	}
+	// Increase the counter
+	counter++;
+	
 	var response = null;
 	
 	if(event.message == 'institute'){
