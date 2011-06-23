@@ -32,6 +32,7 @@
 			<key>Start</key>
 			<array>
 				<string>redirect.js</string>
+				<string>error.js</string>
 			</array>
 		</dict>
 	</dict>
@@ -55,7 +56,7 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://kotnetloginextension.googlecode.com/hg/updates.plist</string>
+	<string>http://kotnetloginextension.googlecode.com/hg/kotnetlogin_safari/updates.plist</string>
 	<key>Website</key>
 	<string>http://kotnetloginextension.googlecode.com</string>
 </dict>
