@@ -13,12 +13,24 @@ function resetCounter(){
 }
 // Reset the counter when settings are changed
 safari.extension.settings.addEventListener("change", resetCounter, false);
+// Listen for button presses
+safari.application.addEventListener("command", trigger, false);
+
+function trigger(event){
+	if(event.command == 'trigger'){
+		safari.extension.settings.active = !safari.extension.settings.active;
+	}
+}
 
 // Send the requested info back to the requester
 function sendSettings(event) {
 	
 	// We are only interested in events requesting information from settings
 	if(event.name != 'getInfo'){
+		return;
+	}
+	
+	if(!safari.extension.settings.active){
 		return;
 	}
 	

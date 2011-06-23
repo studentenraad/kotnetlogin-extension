@@ -20,6 +20,17 @@
 	<dict>
 		<key>Global Page</key>
 		<string>settings.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Identifier</key>
+				<string>trigger</string>
+				<key>Image</key>
+				<string>Icon-16.png</string>
+				<key>Label</key>
+				<string>Trigger Kotnet Login</string>
+			</dict>
+		</array>
 	</dict>
 	<key>Content</key>
 	<dict>

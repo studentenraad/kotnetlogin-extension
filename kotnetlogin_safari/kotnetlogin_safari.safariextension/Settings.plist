@@ -68,5 +68,11 @@
 			<string>kotnetext</string>
 		</array>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>active</string>
+	</dict>
 </array>
 </plist>
