@@ -28,7 +28,7 @@
 				<key>Image</key>
 				<string>Icon-16.png</string>
 				<key>Label</key>
-				<string>Trigger Kotnet Login</string>
+				<string>Toggle Kotnet Login</string>
 			</dict>
 		</array>
 	</dict>
