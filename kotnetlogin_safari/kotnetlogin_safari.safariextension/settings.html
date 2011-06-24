@@ -15,15 +15,21 @@ function resetCounter(){
 setInterval('resetCounter()',60000);
 // Reset the counter when settings are changed
 safari.extension.settings.addEventListener("change", resetCounter, false);
+
+/*
+// This code listens for presses on the toggle button,
+// but because it's impossible to visualize the state of the extension in a user-friendly way (e.g. a label on the button)
+// We don't use it
+
 // Listen for button presses
 safari.application.addEventListener("command", trigger, false);
 
-function trigger(event){
-	if(event.command == 'trigger'){
+function toggle(event){
+	if(event.command == 'toggle'){
 		safari.extension.settings.active = !safari.extension.settings.active;
 	}
 }
-
+*/
 // Send the requested info back to the requester
 function sendSettings(event) {
 	
