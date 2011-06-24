@@ -15,9 +15,7 @@ if (document.location.host == 'netlogin.kuleuven.be') {
 		// request settings
 		chrome.extension.sendRequest({name: "info"}, function(response) {
 			// If the extension is active, pick the institute set in the settings
-	    	if(response.active == 1){
-				pickAssociation(response.inst);
-			}
+			pickAssociation(response.inst);
 		});
 	}
 }

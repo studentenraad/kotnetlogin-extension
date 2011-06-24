@@ -6,8 +6,8 @@ var page = null;
 
 // mapping between hostnames and functions to fetch form information
 var pages = {
-	'idp.kuleuven.be': getShibbolethForm,
-	'idp.groept.be': getShibbolethForm,
+	'idp.kuleuven.be': getKuleuvenForm,
+	'idp.groept.be': getGroepTForm,
 	'netlogin.kuleuven.be' : getNetloginForm
 }
 
@@ -43,8 +43,8 @@ function login(event){
 		data.form.submit();
 }
 
-// Get form and input fields from the shibboleth page
-function getShibbolethForm(){
+// Get form and input fields from the KULeuven shibboleth page
+function getKuleuvenForm(){
 	var response = new Object();
 	// Get the form and fields by id.
 	response.form = document.getElementById('loginForm');
@@ -52,6 +52,16 @@ function getShibbolethForm(){
 	response.passwordField = document.getElementById('password');
 	// hack: form.submit() only works when there's no element named 'submit'
 	response.form.elements['submit'].name = 'btnSubmit';
+	return response;
+}
+
+// Get form and input fields from the GroepT shibboleth page
+function getGroepTForm(){
+	var response = new Object();
+	// Get the form and fields by id.
+	response.form = document.getElementById('login');
+	response.usernameField = document.getElementById('username');
+	response.passwordField = document.getElementById('password');
 	return response;
 }
 

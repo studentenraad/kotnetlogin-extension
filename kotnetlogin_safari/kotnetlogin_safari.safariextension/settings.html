@@ -11,6 +11,8 @@ var MAX_COUNTER = 5;
 function resetCounter(){
 	counter = 0;
 }
+// Reset the counter every minute
+setInterval('resetCounter()',60000);
 // Reset the counter when settings are changed
 safari.extension.settings.addEventListener("change", resetCounter, false);
 // Listen for button presses
