@@ -22,8 +22,8 @@ chrome.extension.onRequest.addListener(
 	}
 	counter++;
 	// If the request is for information send back the username, password, institute and status
-    if (request.name == 'info') 
-      sendResponse({user : localStorage.user, pass : localStorage.pass, inst : localStorage.inst, active : localStorage.active})
+    if (request.name == 'info' && localStorage.active == 1) 
+      sendResponse({user : localStorage.user, pass : localStorage.pass, inst : localStorage.inst});
   });
 
 // Listen for click events on the extension icon	  
