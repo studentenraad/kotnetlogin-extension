@@ -63,20 +63,23 @@ function getGroepTForm(){
 // Get form and input fields from the netlogin page
 function getNetloginForm(){
 	var response = new Object();
-	var form = null;
-	forms = document.forms['netlogin'];
+	response.form = document.forms['netlogin'];
 	// hack: form.submit() only works when there's no element named 'submit'
 	response.form.elements['submit'].name = 'btnSubmit';
 	// extract username and password fields
-	for(field in response.form.elements){
+	for(x in response.form.elements){
+		var field = reponse.form.elements[x]; 
 		if(field.type == 'text'){
 			// username field
+			console.log('found username field');
 			response.usernameField = field;
 		}
 		if(field.type == 'password'){
 			// password field
+			console.log('found password field');
 			response.passwordField = field;
 		}
 	}
+	console.log('trying to fill in the fields ...');
 	return response;
 }
