@@ -8,16 +8,13 @@ pickAssociation = function(institute) {
     document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf.pl?inst=' + institute + '&lang=nl&submit=Ga+verder+%2F+Continue';
 }
 
-// Check if we are on the netlogin page
-if (document.location.host == 'netlogin.kuleuven.be') {
-	// Check if we are on the page where you need to select the institute
-	if(document.location.href.indexOf('wayf.pl') == -1){
-		// request settings
-		chrome.extension.sendRequest({name: "info"}, function(response) {
-			// If the extension is active, pick the institute set in the settings
-			pickAssociation(response.inst);
-		});
-	}
+// Check if we are on the netlogin wayf page
+if (document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'http://netlogin.kuleuven.be/') {
+	// request settings
+	chrome.extension.sendRequest({name: "info"}, function(response) {
+		// If the extension is active, pick the institute set in the settings
+		pickAssociation(response.inst);
+	});
 }
 	
 	 

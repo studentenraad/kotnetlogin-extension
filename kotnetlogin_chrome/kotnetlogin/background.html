@@ -9,11 +9,15 @@ function resetCounter(){
 	counter = 0;
 }
 // Reset the counter every minute
-setInterval('resetCounter()',60000);
+setInterval('resetCounter()',10000);
 
 // Start listening for requests for information
 chrome.extension.onRequest.addListener(
   function(request, sender, sendResponse) {
+	// If we aren't active, we do nothing
+	if(localStorage.active == 0){
+		return;
+	}
 	// Check if we didn't request too much information in a short interval. That would be a sign of wrong credentials
 	if(counter >= MAX_COUNTER){
 		// Send back null to indicate a failure.
@@ -22,7 +26,7 @@ chrome.extension.onRequest.addListener(
 	}
 	counter++;
 	// If the request is for information send back the username, password, institute and status
-    if (request.name == 'info' && localStorage.active == 1) 
+    if (request.name == 'info') 
       sendResponse({user : localStorage.user, pass : localStorage.pass, inst : localStorage.inst});
   });
 

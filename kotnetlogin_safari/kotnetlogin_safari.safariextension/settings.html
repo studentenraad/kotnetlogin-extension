@@ -33,12 +33,13 @@ function toggle(event){
 // Send the requested info back to the requester
 function sendSettings(event) {
 	
-	// We are only interested in events requesting information from settings
-	if(event.name != 'getInfo'){
+	// If we aren't active, we do nothing
+	if(!safari.extension.settings.active){
 		return;
 	}
 	
-	if(!safari.extension.settings.active){
+	// We are only interested in events requesting information from settings
+	if(event.name != 'getInfo'){
 		return;
 	}
 	
