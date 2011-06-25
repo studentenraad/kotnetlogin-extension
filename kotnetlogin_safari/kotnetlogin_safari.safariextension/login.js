@@ -6,9 +6,9 @@ var page = null;
 
 // mapping between hostnames and functions to fetch form information
 var pages = {
-	'idp.kuleuven.be': getKuleuvenForm,
-	'idp.groept.be': getGroepTForm,
-	'netlogin.kuleuven.be' : getNetloginForm
+	'https://idp.kuleuven.be/idp/view/login.htm': getKuleuvenForm,
+	'https://idp.groept.be/idp/view/login.htm': getGroepTForm,
+	'https://netlogin.kuleuven.be/cgi-bin/wayf.pl' : getNetloginForm
 }
 
 // Register for message replies
@@ -17,7 +17,7 @@ safari.self.addEventListener("message", login, false);
 // iterate over all possible pages
 for(var p in pages){
 	// If we are on page for which login is implemented
-	if(document.location.host == p) {
+	if(document.location.href.indexOf(p) == 0) {
 		// Store the page we're on, so we can use it later to extract the dom elements
 		page = p;
 		// Request credentials from global page
@@ -68,13 +68,12 @@ function getGroepTForm(){
 // Get form and input fields from the netlogin page
 function getNetloginForm(){
 	var response = new Object();
-	// find form
 	response.form = document.forms['netlogin'];
 	// hack: form.submit() only works when there's no element named 'submit'
 	response.form.elements['submit'].name = 'btnSubmit';
 	// extract username and password fields
 	for(x in response.form.elements){
-		var field = response.form.elements[x];
+		var field = response.form.elements[x]; 
 		if(field.type == 'text'){
 			// username field
 			response.usernameField = field;

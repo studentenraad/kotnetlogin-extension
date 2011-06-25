@@ -1,15 +1,15 @@
 // Variable to keep the current page
 // mapping between hostnames and functions to fetch form information
 var pages = {
-	'idp.kuleuven.be': getKuleuvenForm,
-	'idp.groept.be': getGroepTForm,
-	'netlogin.kuleuven.be' : getNetloginForm
+	'https://idp.kuleuven.be/idp/view/login.htm': getKuleuvenForm,
+	'https://idp.groept.be/idp/view/login.htm': getGroepTForm,
+	'https://netlogin.kuleuven.be/cgi-bin/wayf.pl' : getNetloginForm
 }
 
 // iterate over all possible pages
 for(var p in pages){
 	// If we are on page for which login is implemented
-	if(document.location.host == p) {
+	if(document.location.href.indexOf(p) == 0) {
 		// hack:  assign it to another variable, by the time the callback function is called, p will have another value
 		var page = p;
 		// Store the page we're on, so we can use it later to extract the dom elements
@@ -68,18 +68,15 @@ function getNetloginForm(){
 	response.form.elements['submit'].name = 'btnSubmit';
 	// extract username and password fields
 	for(x in response.form.elements){
-		var field = reponse.form.elements[x]; 
+		var field = response.form.elements[x]; 
 		if(field.type == 'text'){
 			// username field
-			console.log('found username field');
 			response.usernameField = field;
 		}
 		if(field.type == 'password'){
 			// password field
-			console.log('found password field');
 			response.passwordField = field;
 		}
 	}
-	console.log('trying to fill in the fields ...');
 	return response;
 }

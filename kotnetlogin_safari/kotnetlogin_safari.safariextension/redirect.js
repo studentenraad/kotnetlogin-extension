@@ -7,7 +7,7 @@ if(document.location.host == 'toledo.kuleuven.be') {
 }
 
 // Redirect to login when visiting http(s)://netlogin.kuleuven.be
-if(document.location.host == 'netlogin.kuleuven.be') {
+if(document.location.href == 'http://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/') {
 	// Request institute from settings
 	if(document.location.href.indexOf('wayf.pl') == -1){
 		safari.self.tab.dispatchMessage("getInfo",REDIRECT_KEY);
