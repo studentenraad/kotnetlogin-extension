@@ -5,10 +5,16 @@ var LOGIN_KEY =  'login';
 var page = null;
 
 // mapping between hostnames and functions to fetch form information
+// because some versions of safari seem to explicitly add 443 to the url, we need to add every url twice, once with and once without 443
+// it's ugly, i know, maybe I'll think of a way to avoid it when I'm adding more institutes to the extension (and the problem is still present in future versions of safari)
+// for now, this will have to do it. 
 var pages = {
 	'https://idp.kuleuven.be/idp/view/login.htm': getKuleuvenForm,
+	'https://idp.kuleuven.be:443/idp/view/login.htm': getKuleuvenForm,
 	'https://idp.groept.be/idp/view/login.htm': getGroepTForm,
-	'https://netlogin.kuleuven.be/cgi-bin/wayf.pl' : getNetloginForm
+	'https://idp.groept.be:443/idp/view/login.htm': getGroepTForm,
+	'https://netlogin.kuleuven.be/cgi-bin/wayf.pl' : getNetloginForm,
+	'https://netlogin.kuleuven.be:443/cgi-bin/wayf.pl' : getNetloginForm
 }
 
 // Register for message replies
