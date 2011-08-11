@@ -9,7 +9,7 @@ pickAssociation = function(institute) {
 }
 
 // Check if we are on the netlogin wayf page
-if (document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'http://netlogin.kuleuven.be/') {
+if (document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/campusnet/' || document.location.href == 'https://netlogin.kuleuven.be/cgi-bin/netlogout.pl') {
 	// request settings
 	chrome.extension.sendRequest({name: "info"}, function(response) {
 		// If the extension is active, pick the institute set in the settings

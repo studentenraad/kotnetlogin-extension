@@ -43,7 +43,10 @@ function login(event){
 		// Fetch form and form input fields
 		data = pages[page]();
 		// Fill in the fields
-		data.usernameField.value = username;
+		if(data.usernameField){
+			// username might be filled in already (e.g. on logout)
+			data.usernameField.value = username;
+		}
 		data.passwordField.value = password;
 		// Submit the form
 		data.form.submit();
@@ -75,6 +78,10 @@ function getGroepTForm(){
 function getNetloginForm(){
 	var response = new Object();
 	response.form = document.forms['netlogin'];
+	if(!response.form){
+		// we are on netlogout
+		response.form = document.forms['netlogout'];
+	}
 	// hack: form.submit() only works when there's no element named 'submit'
 	response.form.elements['submit'].name = 'btnSubmit';
 	// extract username and password fields

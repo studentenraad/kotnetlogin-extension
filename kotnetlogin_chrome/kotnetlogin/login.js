@@ -32,7 +32,10 @@ function login(page,username,password){
 		// Fetch form and form input fields
 		data = pages[page]();
 		// Fill in the fields
-		data.usernameField.value = username;
+		if(data.usernameField){
+			// username not yet filled in (e.g. on logout)
+			data.usernameField.value = username;
+		}
 		data.passwordField.value = password;
 		// Submit the form
 		data.form.submit();
@@ -64,6 +67,10 @@ function getGroepTForm(){
 function getNetloginForm(){
 	var response = new Object();
 	response.form = document.forms['netlogin'];
+	if(!response.form){
+		// we are on the kotnet logout page
+		response.form = document.forms['netlogout'];
+	}
 	// hack: form.submit() only works when there's no element named 'submit'
 	response.form.elements['submit'].name = 'btnSubmit';
 	// extract username and password fields
