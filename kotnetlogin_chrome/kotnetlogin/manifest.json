@@ -1,7 +1,7 @@
 {
   "name": "Kotnet Login",
   "update_url": "http://kotnetloginextension.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
-  "version": "1.2",
+  "version": "1.5",
   "description": "Kotnet Login is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...",
   "background_page": "background.html",
   "browser_action": {

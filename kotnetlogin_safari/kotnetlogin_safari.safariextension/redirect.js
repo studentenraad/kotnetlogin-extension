@@ -7,7 +7,7 @@ if(document.location.host == 'toledo.kuleuven.be') {
 }
 
 // Redirect to login when visiting http(s)://netlogin.kuleuven.be
-if(document.location.href == 'http://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/') {
+if(document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/campusnet/' || document.location.href == 'https://netlogin.kuleuven.be/cgi-bin/netlogout.pl') {
 	// Request institute from settings
 	if(document.location.href.indexOf('wayf.pl') == -1){
 		safari.self.tab.dispatchMessage("getInfo",REDIRECT_KEY);

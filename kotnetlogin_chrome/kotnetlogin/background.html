@@ -2,14 +2,14 @@
 // Keep this counter to avoid failing submit loops when the credentials are invalid
 var counter = 0;
 
-var MAX_COUNTER = 5;
+var MAX_COUNTER = 10;
 
 // Reset the counter
 function resetCounter(){
 	counter = 0;
 }
 // Reset the counter every minute
-setInterval('resetCounter()',10000);
+setInterval('resetCounter()',60000);
 
 // Start listening for requests for information
 chrome.extension.onRequest.addListener(
@@ -59,7 +59,7 @@ function init() {
 	// If the local storage doesn't contain the status of the extension, it was just installed
 	// Open the options page
     chrome.browserAction.setIcon({path: "icon.png"});
-    chrome.browserAction.setBadgeText({text: 'uit'});
+    //chrome.browserAction.setBadgeText({text: 'uit'});
     chrome.tabs.create({url : chrome.extension.getURL("options.html")});
   }
 }
