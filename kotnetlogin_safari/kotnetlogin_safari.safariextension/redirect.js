@@ -28,7 +28,3 @@ function redirect(event){
 
 // Listen for message replies
 safari.self.addEventListener("message", redirect, false);
-
-
-
-

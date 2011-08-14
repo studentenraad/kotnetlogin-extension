@@ -28,6 +28,7 @@ function openUrl(url) {
   <text value="Door:" style="font-weight: bold;"/>
   <text value="Stijn Vermeeren"/>
   <text value="Peter Mylemans"/>
+	<text value="Albert Jorissen"/>
 
   <separator class="thin"/>
 </vbox>

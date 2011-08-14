@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<overlay id="kotnetlogin_overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/settings.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/login.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/redirect.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/init.js" />
+
+<statusbar id="status-bar">
+  <statusbarpanel class="statusbarpanel-iconic" id="kotnettoggle" src="chrome://kotnetlogin/content/images/on.png" onclick="toggle();" />
+</statusbar>
+
+</overlay>
