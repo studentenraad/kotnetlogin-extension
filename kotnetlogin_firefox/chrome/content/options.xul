@@ -7,25 +7,25 @@
      onunload="save();"
      onload="load();">
 
-<script type="application/x-javascript" src="chrome://kotnetlogin/content/prefmanager.js" />
-<script type="application/x-javascript" src="chrome://kotnetlogin/content/pwmanager.js" />
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/settings.js" />
 <script type="text/javascript"><![CDATA[
 function load() {
-  var key = PwManager.load();
-  if (key) {
-    this.document.getElementById('uid_input').value = key.user;
-    this.document.getElementById('pwd_input').value = key.password;
-  }
+	console.log('bla');
+	var key = Settings.getSettings();
+	this.document.getElementById('uid_input').value = key.username;
+	this.document.getElementById('pwd_input').value = key.password;
+	console.log('bla');
 }
+
 function save() {
-  PwManager.save(this.document.getElementById('uid_input').value, this.document.getElementById('pwd_input').value);
+  Settings.setSettings(this.document.getElementById('uid_input').value, this.document.getElementById('pwd_input').value);
 }
 ]]></script>
 
 <prefpane id="kotnetlogin_options_pane" label="">
 	<preferences>
-		<preference id="inst" name="extensions.kotnetlogin.inst" type="string"/>
-		<preference id="enabled" name="extensions.kotnetlogin.enabled" type="bool"/>
+		<preference id="inst" name="extensions.kotnetlogin.institute" type="string"/>
+		<preference id="enabled" name="extensions.kotnetlogin.active" type="bool"/>
 	</preferences>
  
 	<vbox>
@@ -34,7 +34,7 @@ function save() {
 			<textbox id="uid_input"/>
 		</hbox>
 		<hbox>
-			<label width="100" control="pwd_input" value="Paswoord: "/>
+			<label width="100" control="pwd_input" value="Wachtwoord: "/>
 			<textbox id="pwd_input" type="password"/>
 		</hbox>
 		<hbox>

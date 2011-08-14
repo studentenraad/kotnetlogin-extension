@@ -1,2 +1,2 @@
-pref("extensions.kotnetlogin.inst", "kuleuven");
-pref("extensions.kotnetlogin.enabled", true);
+pref("extensions.kotnetlogin.institute", "kuleuven");
+pref("extensions.kotnetlogin.active", true);
