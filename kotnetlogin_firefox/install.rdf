@@ -6,14 +6,15 @@
 		<em:name>Kotnet Login</em:name>
 		<em:version>1.5</em:version>
 		<em:description>Automatische login voor Kotnet.</em:description>
-		<em:creator>Stijn Vermeeren</em:creator>
+		<em:creator>Albert Jorissen</em:creator>
 		<em:developer>Peter Mylemans</em:developer>
-		<em:developer>Albert Jorissen</em:developer>
+		<em:developer>Stijn Vermeeren</em:developer>
 		<em:homepageURL>https://code.google.com/p/kotnetloginextension/</em:homepageURL>
 		<em:optionsURL>chrome://kotnetlogin/content/options.xul</em:optionsURL>
 		<em:aboutURL>chrome://kotnetlogin/content/about.xul</em:aboutURL>
 		<em:updateURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/update.rdf</em:updateURL>
 		<em:type>2</em:type>
+		<em:iconURL>chrome://firebug/kotnetlogin.png</em:iconURL>
 
         <!-- Firefox -->
 		<em:targetApplication>
