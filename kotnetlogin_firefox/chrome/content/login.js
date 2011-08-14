@@ -22,6 +22,7 @@ function login(document){
 		var settings = Settings.getSettings();
 		if(settings == null){
 			alert('De Kotnet Login Extentie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd?');
+			window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
 			return;
 		}
 		// Extract username and password
