@@ -20,9 +20,18 @@ function login(document){
 			return;
 		}
 		var settings = Settings.getSettings();
+		if(settings == null){
+			alert('De Kotnet Login Extentie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd?');
+			return;
+		}
 		// Extract username and password
 		var username = settings.username;
 		var password = settings.password;
+		if(username == ''){
+			alert('Please enter your KULeuven Association credentials. Then refresh this page to have them filled in automatically.\nPress OK to proceed ...');
+			window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
+			return;
+		}
 		// Fetch form and form input fields
 		data = pages[page](document);
 		// Fill in the fields

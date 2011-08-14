@@ -1,5 +1,16 @@
 var nsLoginInfo = new Components.Constructor("@mozilla.org/login-manager/loginInfo;1", Components.interfaces.nsILoginInfo, "init");
 
+var counter = 0;
+
+var MAX_COUNTER = 10;
+
+// Reset the counter
+function resetCounter(){
+	counter = 0;
+}
+// Reset the counter every minute
+setInterval('resetCounter()',60000);
+
 var Settings = {
 	prefInterface : Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.kotnetlogin.").QueryInterface(Components.interfaces.nsIPrefBranch2),
 	passwordManager : Components.classes["@mozilla.org/login-manager;1"].getService(Components.interfaces.nsILoginManager),
@@ -7,12 +18,17 @@ var Settings = {
 	realm : 'Automatische Kotnet login',
 	
 	getSettings: function(){
+		if(counter >= MAX_COUNTER){
+			// Send back null to indicate a failure.
+			return null;
+		}
+		counter++;
 		// get prefs
 		var active = this.prefInterface.getBoolPref('active');
 		var institute = this.prefInterface.getCharPref('institute');
 		// defaults
-		var username = false;
-		var password = false;
+		var username = '';
+		var password = '';
 		// get saved login
 		var logins = this.passwordManager.findLogins({}, this.host, null, this.realm);
 	    if(logins.length > 0) {
@@ -34,9 +50,13 @@ var Settings = {
 		var loginInfo = new nsLoginInfo(this.host, null, this.realm, username, password, '', '');
 		// save it
 		this.passwordManager.addLogin(loginInfo);
+		resetCounter();
 	},
 	toggle: function() {
 		this.prefInterface.setBoolPref('active',!this.prefInterface.getBoolPref('active'));
+	},
+	isActive: function() {
+		return this.prefInterface.getBoolPref('active');
 	}
 }
 
