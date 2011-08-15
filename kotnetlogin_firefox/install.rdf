@@ -14,7 +14,7 @@
 		<em:aboutURL>chrome://kotnetlogin/content/about.xul</em:aboutURL>
 		<em:updateURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/update.rdf</em:updateURL>
 		<em:type>2</em:type>
-		<em:iconURL>chrome://firebug/kotnetlogin.png</em:iconURL>
+		<em:iconURL>chrome://kotnetlogin/content/images/kotnetlogin.png</em:iconURL>
 
         <!-- Firefox -->
 		<em:targetApplication>
