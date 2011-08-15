@@ -21,9 +21,9 @@ var UrlObserver = {
 	if(!settings.active){
 		return;
 	}
-	
+
+	redirect(event.originalTarget,settings);
 	try{
-		redirect(event.originalTarget,settings);
 		login(event.originalTarget,settings);
 	} catch(err){
 		alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd?');

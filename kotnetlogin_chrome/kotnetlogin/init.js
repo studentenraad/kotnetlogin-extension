@@ -7,9 +7,9 @@ chrome.extension.sendRequest({name: "info"}, function(settings) {
 		if(!settings.active){
 			return;
 		}
-		
+
+		redirect(document,settings);
 		try{
-			redirect(document,settings);
 			login(document,settings);
 		} catch(err){
 			alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd? Verander dan aub je wachtwoord in de instellingen.');

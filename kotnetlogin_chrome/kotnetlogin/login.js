@@ -24,6 +24,7 @@ function login(document,settings){
 		if(!page){
 			return;
 		}
+		
 		// Extract username and password
 		var username = settings.username;
 		var password = settings.password;
