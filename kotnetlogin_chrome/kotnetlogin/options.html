@@ -109,6 +109,7 @@ var resetButton;
 
 init();
 
+// Load settings from localStorage and fill them in in the form
 function init() {
   username = document.getElementById("username");
   password = document.getElementById("password");
@@ -122,6 +123,7 @@ function init() {
   markClean();
 }
 
+// Save settings in localStorage
 function save() {
   var wasNull = (localStorage.active == null);
   localStorage.username = username.value;

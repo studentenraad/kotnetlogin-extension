@@ -10,11 +10,9 @@
 <script type="application/x-javascript" src="chrome://kotnetlogin/content/settings.js" />
 <script type="text/javascript"><![CDATA[
 function load() {
-	console.log('bla');
 	var key = Settings.getSettings();
 	this.document.getElementById('uid_input').value = key.username;
 	this.document.getElementById('pwd_input').value = key.password;
-	console.log('bla');
 }
 
 function save() {

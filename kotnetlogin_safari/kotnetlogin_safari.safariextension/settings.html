@@ -7,7 +7,7 @@
 /*
 // This code listens for presses on the toggle button,
 // but because it's impossible to visualize the state of the extension in a user-friendly way (e.g. a label on the button)
-// We don't use it
+// We don't use it (yet/anymore)
 
 // Listen for button presses
 safari.application.addEventListener("command", trigger, false);
@@ -18,11 +18,13 @@ function toggle(event){
 	}
 }
 */
+
 // Send the requested info back to the requester
 function sendSettings(event) {
 	
-	// We are only interested in events requesting information from settings
+	// We are only interested in events requesting settings
 	if(event.name != 'getSettings'){
+		// another event happened, exit
 		return;
 	}
 	
