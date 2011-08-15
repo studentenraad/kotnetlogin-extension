@@ -1,25 +1,24 @@
-// mapping between hostnames and functions to fetch form information
-// because some versions of safari seem to explicitly add 443 to the url, we need to add every url twice, once with and once without 443
-// it's ugly, i know, maybe I'll think of a way to avoid it when I'm adding more institutes to the extension (and the problem is still present in future versions of safari)
-// for now, this will have to do it. 
-var pages = {
-	'https://idp.kuleuven.be/idp/view/login.htm': getKuleuvenForm,
-	'https://idp.kuleuven.be:443/idp/view/login.htm': getKuleuvenForm,
-	'https://idp.groept.be/idp/view/login.htm': getGroepTForm,
-	'https://idp.groept.be:443/idp/view/login.htm': getGroepTForm,
-	'https://netlogin.kuleuven.be/cgi-bin/wayf.pl' : getNetloginForm,
-	'https://netlogin.kuleuven.be:443/cgi-bin/wayf.pl' : getNetloginForm
+var urls = {
+	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
+	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
+	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf\.pl/
+}
+
+var forms = {
+	'kuleuven':getKuleuvenForm,
+	'groept':getGroepTForm,
+	'netlogin':getNetloginForm
 }
 
 // Login
 function login(document,settings){
 		// iterate over all pages
 		var page = false;
-		for(var p in pages){
+		for(var url in urls){
 			// If we are on page for which login is implemented
-			if(document.location.href.indexOf(p) == 0) {
+			if(document.location.href.match(urls[url])) {
 				// Login
-				page = p;
+				page = url;
 			}
 		}
 		if(!page){
@@ -29,7 +28,7 @@ function login(document,settings){
 		var username = settings.username;
 		var password = settings.password;
 		// Fetch form and form input fields
-		data = pages[page](document);
+		data = forms[page](document);
 		// Fill in the fields
 		if(data.usernameField){
 			// username might be filled in already (e.g. on logout)
