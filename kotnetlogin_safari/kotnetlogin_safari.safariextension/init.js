@@ -13,12 +13,11 @@ safari.self.addEventListener("message", function(response){
 		return;
 	}
 	
-	//try{
+	try{
 		redirect(document,settings);
 		login(document,settings);
-	//} catch(err){
-	//	alert(document.location.href);
-		//alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd? Verander dan aub je wachtwoord in de instellingen.');
-	//}
+	} catch(err){
+		alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd? Verander dan aub je wachtwoord in de instellingen.');
+	}
 }, false);
 safari.self.tab.dispatchMessage("getSettings",null);
