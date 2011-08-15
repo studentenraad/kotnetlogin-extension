@@ -1,19 +1,24 @@
-// mapping between hostnames and functions to fetch form information
-var pages = {
-	'https://idp.kuleuven.be/idp/view/login.htm': getKuleuvenForm,
-	'https://idp.groept.be/idp/view/login.htm': getGroepTForm,
-	'https://netlogin.kuleuven.be/cgi-bin/wayf.pl' : getNetloginForm,
+var urls = {
+	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
+	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
+	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf\.pl/
+}
+
+var forms = {
+	'kuleuven':getKuleuvenForm,
+	'groept':getGroepTForm,
+	'netlogin':getNetloginForm
 }
 
 // Login
 function login(document,settings){
 		// iterate over all pages
 		var page = false;
-		for(var p in pages){
+		for(var url in urls){
 			// If we are on page for which login is implemented
-			if(document.location.href.indexOf(p) == 0) {
+			if(document.location.href.match(urls[url])) {
 				// Login
-				page = p;
+				page = url;
 			}
 		}
 		if(!page){
@@ -23,7 +28,7 @@ function login(document,settings){
 		var username = settings.username;
 		var password = settings.password;
 		// Fetch form and form input fields
-		data = pages[page](document);
+		data = forms[page](document);
 		// Fill in the fields
 		if(data.usernameField){
 			// username might be filled in already (e.g. on logout)
