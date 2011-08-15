@@ -10,14 +10,25 @@ var UrlObserver = {
 		return;
 	}
 	
+	var settings = Settings.getSettings();
 	
-	if(!Settings.isActive()){
+	if(settings.username == ''){
+		alert('Please enter your KULeuven Association credentials. Then refresh this page to have them filled in automatically.\nPress OK to proceed ...');
+		window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
 		return;
 	}
 	
-	redirect(event.originalTarget);
-	login(event.originalTarget);
+	if(!settings.active){
+		return;
+	}
 	
+	try{
+		redirect(event.originalTarget,settings);
+		login(event.originalTarget,settings);
+	} catch(err){
+		alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd?');
+		window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
+	}
   }
 }
 

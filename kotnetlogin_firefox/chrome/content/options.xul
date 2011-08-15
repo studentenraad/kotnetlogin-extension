@@ -18,7 +18,7 @@ function load() {
 }
 
 function save() {
-  Settings.setSettings(this.document.getElementById('uid_input').value, this.document.getElementById('pwd_input').value);
+  Settings.setCredentials(this.document.getElementById('uid_input').value, this.document.getElementById('pwd_input').value);
 }
 ]]></script>
 

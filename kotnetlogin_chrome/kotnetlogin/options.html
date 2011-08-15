@@ -116,17 +116,17 @@ function init() {
   saveButton = document.getElementById("save-button");
   resetButton = document.getElementById("reset-button");
 
-  username.value  = localStorage.user || "";
-  password.value  = localStorage.pass || "";
-  institute.value = localStorage.inst || "kuleuven";
+  username.value  = localStorage.username || "";
+  password.value  = localStorage.password || "";
+  institute.value = localStorage.institute || "kuleuven";
   markClean();
 }
 
 function save() {
   var wasNull = (localStorage.active == null);
-  localStorage.user = username.value;
-  localStorage.pass = password.value;
-  localStorage.inst = institute.value;
+  localStorage.username = username.value;
+  localStorage.password = password.value;
+  localStorage.institute = institute.value;
   if (wasNull) localStorage.active = 1;
   document.getElementById('success').style.display = 'block';
   markClean();

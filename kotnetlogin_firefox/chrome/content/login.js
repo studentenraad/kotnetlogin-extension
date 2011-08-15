@@ -6,7 +6,7 @@ var pages = {
 }
 
 // Login
-function login(document){
+function login(document,settings){
 		// iterate over all pages
 		var page = false;
 		for(var p in pages){
@@ -19,20 +19,9 @@ function login(document){
 		if(!page){
 			return;
 		}
-		var settings = Settings.getSettings();
-		if(settings == null){
-			alert('De Kotnet Login Extentie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd?');
-			window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
-			return;
-		}
 		// Extract username and password
 		var username = settings.username;
 		var password = settings.password;
-		if(username == ''){
-			alert('Please enter your KULeuven Association credentials. Then refresh this page to have them filled in automatically.\nPress OK to proceed ...');
-			window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
-			return;
-		}
 		// Fetch form and form input fields
 		data = pages[page](document);
 		// Fill in the fields
@@ -47,7 +36,11 @@ function login(document){
 
 // Get form and input fields from the KULeuven shibboleth page
 function getKuleuvenForm(document){
-	var response = new Object();
+	// return null if password was incorrect
+	if(document.getElementById('username.errors')){
+		return null;
+	}
+	var response = {};
 	// Get the form and fields by id.
 	response.form = document.getElementById('loginForm');
 	response.usernameField = document.getElementById('username');
@@ -59,7 +52,11 @@ function getKuleuvenForm(document){
 
 // Get form and input fields from the GroepT shibboleth page
 function getGroepTForm(document){
-	var response = new Object();
+	// return null if password was incorrect
+	if(document.getElementById('username.errors')){
+		return null;
+	}
+	var response = {};
 	// Get the form and fields by id.
 	response.form = document.getElementById('login');
 	response.usernameField = document.getElementById('username');
@@ -69,7 +66,7 @@ function getGroepTForm(document){
 
 // Get form and input fields from the netlogin page
 function getNetloginForm(document){
-	var response = new Object();
+	var response = {};
 	response.form = document.forms['netlogin'];
 	if(!response.form){
 		// we are on netlogout
