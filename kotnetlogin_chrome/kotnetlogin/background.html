@@ -26,11 +26,12 @@ function init() {
 		localStorage.pass == null;
 	}
 	
+	console.log('here');
 	
 	// If no institute was chosen, select kuleuven as default
   if (localStorage.institute == null){
 	localStorage.institute = "kuleuven"
-	localStorage.active = true;
+	localStorage.active = 1;
     chrome.tabs.create({url : chrome.extension.getURL("options.html")});
 	}
 	

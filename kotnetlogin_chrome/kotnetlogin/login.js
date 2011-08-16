@@ -1,26 +1,32 @@
+// Mapping between login page identifier and the url
 var urls = {
 	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
 	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
 	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf\.pl/
 }
 
+// Mapping between login page identifier and the method that extracts the form
 var forms = {
 	'kuleuven':getKuleuvenForm,
 	'groept':getGroepTForm,
-	'netlogin':getNetloginForm
+	'netlogin':getNetLoginForm
 }
 
 // Login
+// document: javascript document element
+// settings: a map containing at least username and password
 function login(document,settings){
-		// iterate over all pages
+		// variable to remember which login page we're on
 		var page = false;
-		for(var url in urls){
+		// iterate over all known login pages
+		for(var id in urls){
 			// If we are on page for which login is implemented
-			if(document.location.href.match(urls[url])) {
+			if(document.location.href.match(urls[id])) {
 				// Login
-				page = url;
+				page = id;
 			}
 		}
+		// If page is still false, we're not on a login page. Exit.
 		if(!page){
 			return;
 		}
@@ -28,13 +34,15 @@ function login(document,settings){
 		// Extract username and password
 		var username = settings.username;
 		var password = settings.password;
-		// Fetch form and form input fields
+		// Fetch form and form input fields using the forms map
 		data = forms[page](document);
 		// Fill in the fields
 		if(data.usernameField){
 			// username might be filled in already (e.g. on logout)
+			// we only fill it in if it is available
 			data.usernameField.value = username;
 		}
+		// Fill in the password
 		data.passwordField.value = password;
 		// Submit the form
 		data.form.submit();
@@ -71,9 +79,11 @@ function getGroepTForm(document){
 }
 
 // Get form and input fields from the netlogin page
-function getNetloginForm(document){
+function getNetLoginForm(document){
 	var response = {};
+	// Get login form
 	response.form = document.forms['netlogin'];
+	// Check if we got a form, if not, try to get a logout form
 	if(!response.form){
 		// we are on netlogout
 		response.form = document.forms['netlogout'];
