@@ -43,18 +43,3 @@ var Settings = {
 		this.prefInterface.setBoolPref('active',!this.prefInterface.getBoolPref('active'));
 	}
 }
-
-// migrate from 1.0.2 (upgrade support for pre 1.0 is dropped)
-// TODO: delete after releasing 1.6
-try{
-	var prefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("extensions.kotnetlogin.").QueryInterface(Components.interfaces.nsIPrefBranch2);
-	if(prefs.getCharPref('inst')){
-		var enabled = prefs.getBoolPref('enabled');
-		var inst = prefs.getCharPref('inst');
-		prefs.deleteBranch('');
-		prefs.setBoolPref('active',enabled);
-		prefs.setCharPref('institute',inst);
-	}
-} catch(err){
-	// do nothing
-}
