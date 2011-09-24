@@ -77,9 +77,9 @@ function toggle(){
 function setIcon(){
 	// set the icon based on the status
 	if(Settings.getSettings().active){
-		document.getElementById('kotnettoggle').src = "chrome://kotnetlogin/content/images/on.png";
+		document.getElementById('kotnettoggle').image = "chrome://kotnetlogin/content/images/on.png";
 	} else {
-		document.getElementById('kotnettoggle').src = "chrome://kotnetlogin/content/images/off.png";
+		document.getElementById('kotnettoggle').image = "chrome://kotnetlogin/content/images/off.png";
 	}
 	
 }

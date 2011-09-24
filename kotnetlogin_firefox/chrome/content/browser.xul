@@ -8,8 +8,14 @@
 <script type="application/x-javascript" src="chrome://kotnetlogin/content/redirect.js" />
 <script type="application/x-javascript" src="chrome://kotnetlogin/content/init.js" />
 
-<statusbar id="status-bar">
-  <statusbarpanel class="statusbarpanel-iconic" id="kotnettoggle" src="chrome://kotnetlogin/content/images/on.png" onclick="toggle();" />
-</statusbar>
+<toolbarpalette id="BrowserToolbarPalette">
+  <toolbarbutton id="kotnettoggle"
+  class="toolbarbutton-1"
+  label="Kotnet Login"
+  image="chrome://kotnetlogin/content/images/on.png"
+  tooltiptext="Toggle Kotnet Login Extension"
+  oncommand="toggle();"
+  />
+</toolbarpalette>
 
 </overlay>

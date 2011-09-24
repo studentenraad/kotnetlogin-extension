@@ -4,7 +4,7 @@
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>{C0D74264-E30B-47E5-B17B-57F0031891BA}</em:id>
 		<em:name>Kotnet Login</em:name>
-		<em:version>1.6.1</em:version>
+		<em:version>1.6.2</em:version>
 		<em:description>Automatische login voor Kotnet.</em:description>
 		<em:creator>Albert Jorissen</em:creator>
 		<em:developer>Peter Mylemans</em:developer>
