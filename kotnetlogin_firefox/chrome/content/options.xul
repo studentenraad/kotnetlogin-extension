@@ -55,6 +55,7 @@ function save() {
             <menuitem label="Lessius" value="lessius"/>
             <menuitem label="Sint Lukas" value="sintlukas"/>
             <menuitem label="W&amp;K" value="wenk"/>
+			<menuitem label="KotNet Extern" value="kotnetext"/>
           </menupopup>
         </menulist>
 			</vbox>
