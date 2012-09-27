@@ -28,6 +28,7 @@ function openUrl(url) {
   <text value="Stijn Vermeeren"/>
   <text value="Peter Mylemans"/>
   <text value="Albert Jorissen"/>
+  <text value="Siemon Kauffmann"/>
 
   <separator class="thin"/>
 </vbox>

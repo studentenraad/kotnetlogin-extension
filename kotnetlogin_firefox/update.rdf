@@ -6,6 +6,21 @@
 			<RDF:Seq>
 				<RDF:li>
 					<RDF:Description>
+						<em:version>1.8</em:version>
+						<em:targetApplication>
+							<RDF:Description>
+								<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+								<em:minVersion>3.0</em:minVersion>
+								<em:maxVersion>17.*</em:maxVersion>
+								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.8.xpi</em:updateLink>
+								<em:updateHash>sha1:d2d656d8655e7c7890b3c660faa4bd648b531314</em:updateHash>	
+								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.8.xml</em:updateInfoURL>
+							</RDF:Description>
+						</em:targetApplication>
+					</RDF:Description>
+				</RDF:li>
+				<RDF:li>
+					<RDF:Description>
 						<em:version>1.7.1</em:version>
 						<em:targetApplication>
 							<RDF:Description>
