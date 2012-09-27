@@ -8,13 +8,13 @@
 			<key>CFBundleIdentifier</key>
 			<string>kotnetloginextension</string>
 			<key>Developer Identifier</key>
-			<string>U9ETY37BNF</string>
+			<string>PD9UEQGPTR</string>
 			<key>CFBundleVersion</key>
-			<string>4</string>
+			<string>5</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.7</string>
+			<string>1.8</string>
 			<key>URL</key>
-			<string>http://kotnetloginextension.googlecode.com/files/kotnetlogin_safari_1.7.safariextz</string>
+			<string>http://kotnetloginextension.googlecode.com/files/kotnetlogin_safari_1.8.safariextz</string>
 		</dict>
 	</array>
 </dict>
