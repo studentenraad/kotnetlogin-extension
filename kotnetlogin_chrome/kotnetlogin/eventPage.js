@@ -1,4 +1,3 @@
-<script>
 // Start listening for requests for information
 chrome.extension.onRequest.addListener(
   function(request, sender, sendResponse) {
@@ -48,4 +47,3 @@ function init() {
 }
 
 init();
-</script>
