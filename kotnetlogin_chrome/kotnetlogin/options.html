@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Kotnet Login - Options</title>
+<script src="options.js"></script>
 <style>
 body {
   font-family:helvetica, arial, sans-serif;
@@ -64,16 +65,16 @@ body {
 <table>
 <tr>
 	<td><label>Gebruikersnaam: </label></td>
-	<td><input type="text" id="username" oninput="markDirty()"></td>
+	<td><input type="text" id="username"/></td>
 </tr>
 <tr>
 	<td><label>Wachtwoord: </label></td>
-	<td><input type="password" id="password" oninput="markDirty()"></td>
+	<td><input type="password" id="password"/></td>
 </tr>
 <tr>
 	<td><label>Instelling: </label></td>
 	<td>
-	   <select name="institute" id="institute" onchange="markDirty()" />
+	   <select name="institute" id="institute">
 	      <option value="groept-aid">GroepT</option> 
 	      <option value="hubrussel-aid">HUBrussel</option> 
 	      <option value="katho-aid">KATHO</option> 
@@ -92,55 +93,13 @@ body {
 </table>
 
 <div id="footer">
-  <button id="save-button" style="font-weight:bold" onclick="save()">Opslaan</button>
-  <button id="reset-button" onclick="window.close()">Annuleren</button>
+  <button id="save-button" style="font-weight:bold">Opslaan</button>
+  <button id="reset-button">Annuleren</button>
 </div>
 
 <div id="success">
 	De instellingen werden succesvol opgeslagen en zullen vanaf nu gebruikt worden. Je mag deze tab nu sluiten.
 </div>
 
-<script>
-var username;
-var password;
-var institute;
-var saveButton;
-var resetButton;
-
-init();
-
-// Load settings from localStorage and fill them in in the form
-function init() {
-  username = document.getElementById("username");
-  password = document.getElementById("password");
-  institute = document.getElementById("institute");
-  saveButton = document.getElementById("save-button");
-  resetButton = document.getElementById("reset-button");
-
-  username.value  = localStorage.username || "";
-  password.value  = localStorage.password || "";
-  institute.value = localStorage.institute || "kuleuven";
-  markClean();
-}
-
-// Save settings in localStorage
-function save() {
-  var wasNull = (localStorage.active == null);
-  localStorage.username = username.value;
-  localStorage.password = password.value;
-  localStorage.institute = institute.value;
-  if (wasNull) localStorage.active = 1;
-  document.getElementById('success').style.display = 'block';
-  markClean();
-}
-
-function markDirty() {
-  saveButton.disabled = false;
-}
-
-function markClean() {
-  saveButton.disabled = true;
-}
-</script>
 </body>
 </html>
