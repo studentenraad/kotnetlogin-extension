@@ -2,7 +2,7 @@
 var urls = {
 	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
 	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
-	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf\.pl/
+	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/
 }
 
 // Mapping between login page identifier and the method that extracts the form
