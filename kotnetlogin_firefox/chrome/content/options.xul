@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://kotnetlogin/locale/options.dtd">
 
 <prefwindow id="kotnetlogin_options"
-     title="Kotnetlogin instellingen"
+     title="Kotnet Login &options_options;"
      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
      onunload="save();"
      onload="load();">
@@ -28,15 +29,15 @@ function save() {
  
 	<vbox>
 		<hbox>
-			<label width="100" control="uid_input" value="Gebruikers-id: "/>
+			<label width="100" control="uid_input" value="&options_username;: "/>
 			<textbox id="uid_input"/>
 		</hbox>
 		<hbox>
-			<label width="100" control="pwd_input" value="Wachtwoord: "/>
+			<label width="100" control="pwd_input" value="&options_password;: "/>
 			<textbox id="pwd_input" type="password"/>
 		</hbox>
 		<hbox>
-			<label width="100" value="Instelling: "/>
+			<label width="100" value="&options_institute;: "/>
 			<vbox>
         <menulist preference="inst">
           <menupopup>
@@ -61,7 +62,7 @@ function save() {
 			</vbox>
 		</hbox>
 		<hbox>
-			<label width="100" control="enabled_input" value="Ingeschakeld: "/>
+			<label width="100" control="enabled_input" value="&options_active;: "/>
 			<checkbox preference="enabled" id="enabled_input" />
 		</hbox>
 	</vbox>

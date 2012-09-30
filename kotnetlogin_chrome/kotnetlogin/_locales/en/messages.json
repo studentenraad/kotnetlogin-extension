@@ -1,0 +1,54 @@
+{
+	"manifest_extensionDescription": {
+		"description": "The description off the plugin",
+		"message": "Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo..."
+	},
+	"badgeText_inactive": {
+		"description": "Text to show on the icon when the extension is inactive",
+		"message": "off"
+	},
+	"error_noUsername": {
+		"description": "Errormessage shown when no username is set",
+		"message": "Please enter your KULeuven Association credentials in the extension settings. Then refresh this page to login automatically."
+	},
+	"error_loginFailed": {
+		"description": "Errormessage shown when login failed",
+		"message": "The Kotnet Login Extension failed to login. Have you changed your password recently? Then update the extensions options please."
+	},
+	"options_options": {
+		"description": "The word 'Options', as a title",
+		"message": "Options"
+	},
+	"options_loginData": {
+		"description": "Subtitle in options page",
+		"message": "Login data"
+	},
+	"options_loginData_explanation": {
+		"description": "An explanation shown below the subtitle",
+		"message": "Fill in your username (ex. s1234567) and password."
+	},
+	"options_username": {
+		"description": "A label for your username",
+		"message": "Username"
+	},
+	"options_password": {
+		"description": "A label for your password",
+		"message": "Password"
+	},
+	"options_institute": {
+		"description": "A label for your institute",
+		"message": "Institute"
+	},
+	"options_save": {
+		"description": "Text on the save button",
+		"message": "Save"
+	},
+	"options_cancel": {
+		"description": "Text on the cancel button",
+		"message": "Cancel"
+	},
+	"options_succes": {
+		"description": "Message shown when options saved succesfully",
+		"message": "The options were saved succesfully and will be used from now on. You may close this tab."
+	}
+}

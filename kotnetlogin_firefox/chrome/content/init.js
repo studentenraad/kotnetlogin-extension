@@ -19,7 +19,7 @@ var UrlObserver = {
 	var settings = Settings.getSettings();
 	
 	if(settings.username == ''){
-		alert('Please enter your KULeuven Association credentials. Then refresh this page to have them filled in automatically.\nPress OK to proceed ...');
+		alert(document.getElementById("string-bundle").getString('error_noUsername'));
 		window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
 		return;
 	}
@@ -37,11 +37,11 @@ var UrlObserver = {
 		login(event.originalTarget,settings);
 	} catch(err){
 		// login failed, most probably because of wrong credentials. Inform user and open option pane.
-		alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd?');
+		alert(document.getElementById("string-bundle").getString('error_loginFailed'));
 		window.open("chrome://kotnetlogin/content/options.xul", "options", "chrome");
 	}
   }
-}
+};
 
 // Observer settings to make sure the icon is always in sync with the status of the extension (active or inactive)
 var PrefObserver = {
@@ -55,7 +55,7 @@ var PrefObserver = {
 		// a setting has changed, update the icon
 		setIcon();
 	}
-}
+};
 
 // Load the extension for every firefox window
 window.addEventListener('load', function(event) {

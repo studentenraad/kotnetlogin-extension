@@ -1,22 +1,23 @@
 {
   "name": "Kotnet Login",
   "manifest_version": 2,
-  "update_url": "http://kotnetloginextension.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
-  "version": "1.8.2",
-  "homepage_url":"http://kotnetloginextension.googlecode.com",
-  "description": "Kotnet Login is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...",
+  "update_url": "https://kotnetloginextension.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
+  "version": "1.9.1",
+  "homepage_url":"https://kotnetloginextension.googlecode.com",
+  "description": "__MSG_manifest_extensionDescription__",
   
   "background": {
     "scripts": ["background.js"]
   },
   
   "browser_action": {
-      "default_title": "Kotnet Login"
+      "default_title": "Kotnet Login",
+      "default_icon": "icon/icon_128.png"
    },
    "icons": {
-      "32" : "icon_32.png",
-      "48" : "icon_48.png",
-      "128": "icon.png"
+      "32" : "icon/icon_32.png",
+      "48" : "icon/icon_48.png",
+      "128": "icon/icon_128.png"
    },
   "content_scripts": [
     {
@@ -26,5 +27,6 @@
     }
   ],
   "options_page": "options.html",
-  "permissions": ["tabs"]
+  "permissions": ["tabs"],
+  "default_locale": "en"
 }

@@ -8,12 +8,16 @@
 <script type="application/x-javascript" src="chrome://kotnetlogin/content/redirect.js" />
 <script type="application/x-javascript" src="chrome://kotnetlogin/content/init.js" />
 
+<stringbundleset id="stringbundleset">
+	<stringbundle id="string-bundle" src="chrome://kotnetlogin/locale/init.properties"/>
+</stringbundleset>
+
 <toolbarpalette id="BrowserToolbarPalette">
   <toolbarbutton id="kotnettoggle"
   class="toolbarbutton-1"
   label="Kotnet Login"
   image="chrome://kotnetlogin/content/images/on.png"
-  tooltiptext="Toggle Kotnet Login Extension"
+  tooltiptext="Kotnet Login"
   oncommand="toggle();"
   />
 </toolbarpalette>
