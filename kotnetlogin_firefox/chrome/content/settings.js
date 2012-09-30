@@ -42,4 +42,4 @@ var Settings = {
 		// toggle the status of the extension
 		this.prefInterface.setBoolPref('active',!this.prefInterface.getBoolPref('active'));
 	}
-}
+};

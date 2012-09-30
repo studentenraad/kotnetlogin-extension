@@ -9,7 +9,7 @@ safari.self.addEventListener("message", function(response){
 	
 	// The user has not yet set his/her credentials, we can't do anything useful but inform the user of this situation.
 	if(settings.username == ''){
-		alert('Please enter your KULeuven Association credentials in the extension. Then refresh this page to have them filled in automatically.');
+		alert('Vul a.u.b. uw KULeuven Associatie inloggegevens in bij de opties van de extensie. Vernieuw daarna deze pagina om automatisch in te loggen.');
 		return;
 	}
 	
@@ -25,7 +25,7 @@ safari.self.addEventListener("message", function(response){
 	try{
 		login(document,settings);
 	} catch(err){
-		alert('De Kotnet Login Extensie kan je niet inloggen. Heb je onlangs je wachtwoord veranderd? Verander dan aub je wachtwoord in de instellingen.');
+		alert('De Kotnet Login Extensie kan u niet inloggen. Hebt u onlangs uw wachtwoord veranderd? Verander dan a.u.b. het wachtwoord in de opties.');
 	}
 }, false);
 

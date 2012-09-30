@@ -1,0 +1,54 @@
+{
+	"manifest_extensionDescription": {
+		"description": "The description off the plugin",
+		"message": "Kotnet Login is een extensie die u automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo..."
+	},
+	"badgeText_inactive": {
+		"description": "Text to show on the icon when the extension is inactive",
+		"message": "uit"
+	},
+	"error_noUsername": {
+		"description": "Errormessage shown when no username is set",
+		"message": "Vul a.u.b. uw KULeuven Associatie inloggegevens in bij de opties van de extensie. Vernieuw daarna deze pagina om automatisch in te loggen."
+	},
+	"error_loginFailed": {
+		"description": "Errormessage shown when login failed",
+		"message": "De Kotnet Login Extensie kan u niet inloggen. Hebt u onlangs uw wachtwoord veranderd? Verander dan a.u.b. het wachtwoord in de opties."
+	},
+	"options_options": {
+		"description": "The word 'Options', as a title",
+		"message": "Opties"
+	},
+	"options_loginData": {
+		"description": "Subtitle in options page",
+		"message": "Login gegevens"
+	},
+	"options_loginData_explanation": {
+		"description": "An explanation shown below the subtitle",
+		"message": "Vul uw gebruikersnaam (bv. s1234567) en wachtwoord in."
+	},
+	"options_username": {
+		"description": "A label for your username",
+		"message": "Gebruikersnaam"
+	},
+	"options_password": {
+		"description": "A label for your password",
+		"message": "Wachtwoord"
+	},
+	"options_institute": {
+		"description": "A label for your institute",
+		"message": "Instelling"
+	},
+	"options_save": {
+		"description": "Text on the save button",
+		"message": "Opslaan"
+	},
+	"options_cancel": {
+		"description": "Text on the cancel button",
+		"message": "Annuleren"
+	},
+	"options_succes": {
+		"description": "Message shown when options saved succesfully",
+		"message": "De opties werden succesvol opgeslagen en zullen vanaf nu gebruikt worden. U mag deze tab nu sluiten."
+	}
+}

@@ -1,2 +1,4 @@
 content	kotnetlogin	chrome/content/
 overlay	chrome://browser/content/browser.xul	chrome://kotnetlogin/content/browser.xul
+locale kotnetlogin en chrome/locale/en/
+locale kotnetlogin nl chrome/locale/nl/
