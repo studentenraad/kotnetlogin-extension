@@ -10,11 +10,11 @@
 			<key>Developer Identifier</key>
 			<string>PD9UEQGPTR</string>
 			<key>CFBundleVersion</key>
-			<string>5</string>
+			<string>9</string>
 			<key>CFBundleShortVersionString</key>
-			<string>1.8</string>
+			<string>1.9.3.1</string>
 			<key>URL</key>
-			<string>http://kotnetloginextension.googlecode.com/files/kotnetlogin_safari_1.8.safariextz</string>
+			<string>http://kotnetloginextension.googlecode.com/files/kotnetlogin_safari_1.9.3.1.safariextz</string>
 		</dict>
 	</array>
 </dict>
