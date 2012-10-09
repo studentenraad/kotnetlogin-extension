@@ -1,0 +1,12 @@
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://kotnetloginextension.googlecode.com" version="2.0" defaultlocale="en">
+	<name short="Kotnet Login">Kotnet Login Browser Extension</name>
+	<description xml:lang="en">Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</description>
+	<description xml:lang="nl">Kotnet Login is een extensie die u automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...</description>
+	<author href="http://kotnetloginextension.googlecode.com">Kotnet Login</author>
+	<icon src="icon/icon_64.png"/>
+	<icon src="icon/icon_18.png"/>
+	
+	<preference name="institute" value="kuleuven"/>
+	<preference name="active" value="true"/>
+	<update-description href="https://kotnetloginextension.googlecode.com/hg/kotnetlogin_opera/updates.xml"/>
+</widget>

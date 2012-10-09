@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Kotnet Login</title>
+<title>Kotnet Login - Opties</title>
 <script src="options.js"></script>
 <style>
 body {
@@ -58,23 +58,23 @@ body {
 <body>
 	<div id="header">
 		<h1>
-			Kotnet Login - <span data-message="options_options"></span>
+			Kotnet Login - Opties
 		</h1>
 	</div>
-	<div class="section-header first" data-message="options_loginData"></div>
-	<p data-message="options_loginData_explanation"></p>
+	<div class="section-header first">Login gegevens</div>
+	<p>Vul uw gebruikersnaam (bv. s1234567) en wachtwoord in.</p>
 	<p></p>
 	<table>
 		<tr>
-			<td><label data-message="options_username"></label>: </td>
+			<td><label>Gebruikersnaam</label>:</td>
 			<td><input type="text" id="username" /></td>
 		</tr>
 		<tr>
-			<td><label data-message="options_password"></label>: </td>
+			<td><label>Wachtwoord</label>:</td>
 			<td><input type="password" id="password" /></td>
 		</tr>
 		<tr>
-			<td><label data-message="options_institute"></label>:</td>
+			<td><label>Instelling</label>:</td>
 			<td><select name="institute" id="institute">
 					<option value="groept-aid">GroepT</option>
 					<option value="hubrussel-aid">HUBrussel</option>
@@ -91,9 +91,9 @@ body {
 		</tr>
 	</table>
 	<div id="footer">
-		<button id="save-button" style="font-weight: bold" data-message="options_save"></button>
-		<button id="reset-button" data-message="options_cancel"></button>
+		<button id="save-button" style="font-weight: bold">Opslaan</button>
+		<button id="reset-button">Annuleren</button>
 	</div>
-	<div id="success" data-message="options_succes"></div>
+	<div id="success">De opties werden succesvol opgeslagen en zullen vanaf nu gebruikt worden. U mag deze tab nu sluiten.</div>
 </body>
 </html>

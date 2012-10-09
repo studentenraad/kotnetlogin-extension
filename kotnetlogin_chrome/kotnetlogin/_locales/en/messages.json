@@ -25,7 +25,7 @@
 	},
 	"options_loginData_explanation": {
 		"description": "An explanation shown below the subtitle",
-		"message": "Fill in your username (ex. s1234567) and password."
+		"message": "Fill in your username (eg. s1234567) and password."
 	},
 	"options_username": {
 		"description": "A label for your username",

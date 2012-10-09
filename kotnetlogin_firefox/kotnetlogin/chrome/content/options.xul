@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://kotnetlogin/locale/options.dtd">
+
+<prefwindow id="kotnetlogin_options"
+     title="Kotnet Login &options_options;"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+     onunload="save();"
+     onload="load();">
+
+<script type="application/x-javascript" src="chrome://kotnetlogin/content/settings.js" />
+<script type="text/javascript"><![CDATA[
+function load() {
+	var key = Settings.getSettings();
+	this.document.getElementById('uid_input').value = key.username;
+	this.document.getElementById('pwd_input').value = key.password;
+}
+
+function save() {
+  Settings.setCredentials(this.document.getElementById('uid_input').value, this.document.getElementById('pwd_input').value);
+}
+]]></script>
+
+<prefpane id="kotnetlogin_options_pane" label="">
+	<preferences>
+		<preference id="inst" name="extensions.kotnetlogin.institute" type="string"/>
+		<preference id="enabled" name="extensions.kotnetlogin.active" type="bool"/>
+	</preferences>
+ 
+	<vbox>
+		<hbox>
+			<label width="100" control="uid_input" value="&options_username;: "/>
+			<textbox id="uid_input"/>
+		</hbox>
+		<hbox>
+			<label width="100" control="pwd_input" value="&options_password;: "/>
+			<textbox id="pwd_input" type="password"/>
+		</hbox>
+		<hbox>
+			<label width="100" value="&options_institute;: "/>
+			<vbox>
+        <menulist preference="inst">
+          <menupopup>
+            <menuitem label="GroepT" value="groept-aid"/>
+            <menuitem label="HUBrussel" value="hubrussel-aid"/>
+            <menuitem label="KATHO" value="katho-aid"/>
+            <menuitem label="KHBO" value="khbo-aid"/>
+            <menuitem label="KHLeuven" value="khleuven-aid"/>
+            <menuitem label="KHLim" value="khlim-aid"/>
+            <menuitem label="KU Leuven" value="kuleuven"/>
+            <menuitem label="Lessius Hogeschool" value="lessius-aid"/>
+            <menuitem label="W&amp;K" value="wenk-aid"/>
+			<menuitem label="KotNet Extern" value="kotnetext"/>
+          </menupopup>
+        </menulist>
+			</vbox>
+		</hbox>
+		<hbox>
+			<label width="100" control="enabled_input" value="&options_active;: "/>
+			<checkbox preference="enabled" id="enabled_input" />
+		</hbox>
+	</vbox>
+</prefpane>
+ 
+</prefwindow>
