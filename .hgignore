@@ -7,3 +7,7 @@ syntax: regexp
 ^\.project$
 syntax: regexp
 \.crx$
+syntax: regexp
+\.oex$
+syntax: regexp
+\.safariextz$
