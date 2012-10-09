@@ -37,16 +37,14 @@
 		<string>Instelling</string>
 		<key>Titles</key>
 		<array>
-			<string>K.U.Leuven</string>
 			<string>GroepT</string>
 			<string>HUBrussel</string>
 			<string>KATHO</string>
 			<string>KHBO</string>
 			<string>KHLeuven</string>
 			<string>KHLim</string>
-			<string>Lessius Antwerpen</string>
-			<string>Lessius Mechelen</string>
-			<string>Sint Lukas</string>
+			<string>KU Leuven</string>
+			<string>Lessius Hogeschool</string>
 			<string>W&amp;K</string>
 			<string>KotNet Extern</string>
 		</array>
@@ -54,16 +52,14 @@
 		<string>PopUpButton</string>
 		<key>Values</key>
 		<array>
-			<string>kuleuven</string>
 			<string>groept-aid</string>
 			<string>hubrussel-aid</string>
 			<string>katho-aid</string>
 			<string>khbo-aid</string>
 			<string>khleuven-aid</string>
 			<string>khlim-aid</string>
+			<string>kuleuven</string>
 			<string>lessius-aid</string>
-			<string>khm-aid</string>
-			<string>sintlukas-aid</string>
 			<string>wenk-aid</string>
 			<string>kotnetext</string>
 		</array>

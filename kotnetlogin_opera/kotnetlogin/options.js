@@ -12,19 +12,19 @@ function init() {
 	saveButton = document.getElementById("save-button");
 	resetButton = document.getElementById("reset-button");
 
-	username.value  = localStorage.username || "";
-	password.value  = localStorage.password || "";
-	institute.value = localStorage.institute || "kuleuven";
+	username.value  = widget.preferences.username || "";
+	password.value  = widget.preferences.password || "";
+	institute.value = widget.preferences.institute || "kuleuven";
 	markClean();
 }
 
 //Save settings in localStorage
 function save() {
-	var wasNull = (localStorage.active == null);
-	localStorage.username = username.value;
-	localStorage.password = password.value;
-	localStorage.institute = institute.value;
-	if (wasNull) localStorage.active = 1;
+	var wasNull = (widget.preferences.active == null);
+	widget.preferences.username = username.value;
+	widget.preferences.password = password.value;
+	widget.preferences.institute = institute.value;
+	if (wasNull) widget.preferences.active = true;
 	document.getElementById('success').style.display = 'block';
 	markClean();
 }
@@ -45,15 +45,6 @@ function markClean() {
 //`DOMContentLoaded` event on the document, and adding your listeners to
 //specific elements when it triggers.
 document.addEventListener('DOMContentLoaded', function () {
-	// Internationalization
-	document.title = 'Kotnet Login - '+chrome.i18n.getMessage('options_options');
-	var objects = document.getElementsByTagName('*'), i;
-	for(i = 0; i < objects.length; i++) {
-		if (objects[i].dataset && objects[i].dataset.message) {
-			objects[i].innerHTML = chrome.i18n.getMessage(objects[i].dataset.message);
-		}
-	}
-
 	init();
 
 	username.addEventListener('input', markDirty);

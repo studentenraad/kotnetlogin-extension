@@ -4,20 +4,29 @@
 <title>global HTML page</title>
 <script type="text/javascript">
 
-/*
 // This code listens for presses on the toggle button,
 // but because it's impossible to visualize the state of the extension in a user-friendly way (e.g. a label on the button)
 // We don't use it (yet/anymore)
 
 // Listen for button presses
-safari.application.addEventListener("command", trigger, false);
+safari.application.addEventListener("command", processCommand, false);
 
-function toggle(event){
+// Process the button-pressed command
+function processCommand(event){
 	if(event.command == 'toggle'){
 		safari.extension.settings.active = !safari.extension.settings.active;
+		updateToolbarIcon();
 	}
 }
-*/
+
+function updateToolbarIcon() {
+	if (safari.extension.settings.active) {
+		safari.extension.toolbarItems[0].image = safari.extension.baseURI+"Icon-16.png";
+	} else {
+		safari.extension.toolbarItems[0].image = safari.extension.baseURI+"Icon-16-off.png";
+	}
+}
+
 
 // Send the requested info back to the requester
 function sendSettings(event) {
@@ -42,6 +51,7 @@ function sendSettings(event) {
 // Listen for messages and pass them to the sendSettings function
 safari.application.addEventListener("message",sendSettings,false);
 
+updateToolbarIcon();
 </script>
 </head>
 <body>

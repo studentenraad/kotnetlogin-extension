@@ -4,6 +4,8 @@ chrome.extension.onRequest.addListener(
 			// If the request is for information send back the username, password, institute and status
 			if (request.name == 'info') 
 				sendResponse({username : localStorage.username, password : localStorage.password, institute : localStorage.institute,active:(localStorage.active == 1)});
+			if (request.name == 'options')
+				chrome.tabs.create({url : chrome.extension.getURL("options.html")});
 		});
 
 //Listen for click events on the extension icon	  

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+	<Description about="urn:mozilla:install-manifest">
+		<em:id>{C0D74264-E30B-47E5-B17B-57F0031891BA}</em:id>
+		<em:version>2.0</em:version>
+		
+		<em:localized>
+			<Description>
+				<em:locale>en</em:locale>
+				<em:name>Kotnet Login</em:name>
+				<em:description>Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</em:description>
+				<em:creator>Kotnet Login</em:creator>
+				<em:developer>Siemon Kauffmann</em:developer>
+				<em:developer>Albert Jorissen</em:developer>
+				<em:developer>Peter Mylemans</em:developer>
+				<em:developer>Stijn Vermeeren</em:developer>
+				<em:homepageURL>https://kotnetloginextension.googlecode.com</em:homepageURL>
+			</Description>
+		</em:localized>
+		<em:localized>
+			<Description>
+				<em:locale>nl</em:locale>
+				<em:name>Kotnet Login</em:name>
+				<em:description>Kotnet Login is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...</em:description>
+				<em:creator>Kotnet Login</em:creator>
+				<em:developer>Siemon Kauffmann</em:developer>
+				<em:developer>Albert Jorissen</em:developer>
+				<em:developer>Peter Mylemans</em:developer>
+				<em:developer>Stijn Vermeeren</em:developer>
+				<em:homepageURL>https://kotnetloginextension.googlecode.com</em:homepageURL>
+			</Description>
+		</em:localized>
+		<em:name>Kotnet Login</em:name>
+		<em:description>Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</em:description>
+		<em:creator>Kotnet Login</em:creator>
+		<em:developer>Siemon Kauffmann</em:developer>
+		<em:developer>Albert Jorissen</em:developer>
+		<em:developer>Peter Mylemans</em:developer>
+		<em:developer>Stijn Vermeeren</em:developer>
+		<em:homepageURL>https://kotnetloginextension.googlecode.com</em:homepageURL>
+		
+		<em:optionsURL>chrome://kotnetlogin/content/options.xul</em:optionsURL>
+		<em:updateURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/update.rdf</em:updateURL>
+		<em:type>2</em:type>
+		<em:iconURL>chrome://kotnetlogin/content/images/kotnetlogin.png</em:iconURL>
+
+        <!-- Firefox -->
+		<em:targetApplication>
+			<Description>
+				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+				<em:minVersion>3.0</em:minVersion>
+				<em:maxVersion>17.*</em:maxVersion>
+			</Description>
+		</em:targetApplication>
+	</Description>
+</RDF>

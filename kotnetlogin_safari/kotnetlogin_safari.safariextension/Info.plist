@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>Siemon Kauffmann</string>
+	<string>Kotnet Login</string>
 	<key>Builder Version</key>
 	<string>534.57.2</string>
 	<key>CFBundleDisplayName</key>
@@ -13,13 +13,28 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.8</string>
+	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>10</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
 		<string>settings.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>toggle</string>
+				<key>Identifier</key>
+				<string>menu</string>
+				<key>Image</key>
+				<string>Icon-16.png</string>
+				<key>Label</key>
+				<string>Kotnet Login</string>
+				<key>Menu</key>
+				<string></string>
+			</dict>
+		</array>
 	</dict>
 	<key>Content</key>
 	<dict>
@@ -37,7 +52,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven</string>
+	<string>Kotnet Login is een extensie die u automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -48,6 +63,16 @@
 			<array>
 				<string>*.kuleuven.be</string>
 				<string>*.groept.be</string>
+				<string>limo.libis.be</string>
+				<string>*.hubrussel.be</string>
+				<string>*.katho.be</string>
+				<string>*.khbo.be</string>
+				<string>*.khleuven.be</string>
+				<string>*.khlim.be</string>
+				<string>*.lessius.eu</string>
+				<string>*.wenk.be</string>
+				<string>*.khk.be</string>
+				<string>*.kahosl.be</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>
@@ -56,8 +81,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://kotnetloginextension.googlecode.com/hg/kotnetlogin_safari/updates.plist</string>
+	<string>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_safari/updates.plist</string>
 	<key>Website</key>
-	<string>http://kotnetloginextension.googlecode.com</string>
+	<string>https://kotnetloginextension.googlecode.com</string>
 </dict>
 </plist>

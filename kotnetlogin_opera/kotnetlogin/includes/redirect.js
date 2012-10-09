@@ -1,3 +1,18 @@
+//==UserScript==
+//@include *://*.kuleuven.be/*
+//@include *://*.groept.be/*
+//@include *://limo.libis.be/*
+//@include *://*.hubrussel.be/*
+//@include *://*.katho.be/*
+//@include *://*.khbo.be/*
+//@include *://*.khleuven.be/*
+//@include *://*.khlim.be/*
+//@include *://*.lessius.eu/*
+//@include *://*.wenk.be/*
+//@include *://*.khk.be/*
+//@include *://*.kahosl.be/*
+//==/UserScript==
+
 //Redirect the browser when needed
 //document: the javascript document object of the current page
 //settings: a map containing at least the institute

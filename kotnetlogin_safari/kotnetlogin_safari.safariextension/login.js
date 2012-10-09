@@ -1,15 +1,17 @@
 // Mapping between login page identifier and the url
 var urls = {
+	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/,
 	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
 	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
-	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/
+	'kuleuven_via_stuiterproxy':/^https:\/\/stuiterproxy\.kuleuven\.be\/idp\/view\/,DanaInfo=idp\.kuleuven\.be,SSL\+login\.htm$/
 };
 
 // Mapping between login page identifier and the method that extracts the form
 var forms = {
+	'netlogin':getNetLoginForm,
 	'kuleuven':getKuleuvenForm,
 	'groept':getGroepTForm,
-	'netlogin':getNetLoginForm
+	'kuleuven_via_stuiterproxy':getKuleuvenForm
 };
 
 // Login
@@ -45,7 +47,7 @@ function login(document,settings){
 		// Fill in the password
 		data.passwordField.value = password;
 		// Submit the form
-		data.form.submit();
+		data.submit.click();
 }
 
 // Get form and input fields from the KULeuven shibboleth page
@@ -56,11 +58,9 @@ function getKuleuvenForm(document){
 	}
 	var response = {};
 	// Get the form and fields by id.
-	response.form = document.getElementById('loginForm');
 	response.usernameField = document.getElementById('username');
 	response.passwordField = document.getElementById('password');
-	// hack: form.submit() only works when there's no element named 'submit'
-	response.form.elements['submit'].name = 'btnSubmit';
+	response.submit = document.getElementById('loginForm').elements['submit'];
 	return response;
 }
 
@@ -72,9 +72,9 @@ function getGroepTForm(document){
 	}
 	var response = {};
 	// Get the form and fields by id.
-	response.form = document.getElementById('login');
 	response.usernameField = document.getElementById('username');
 	response.passwordField = document.getElementById('password');
+	response.submit = document.getElementsByClassName('submit')[0];
 	return response;
 }
 
@@ -82,10 +82,10 @@ function getGroepTForm(document){
 function getNetLoginForm(document){
 	var response = {};
 	// Get login form
-	response.form = document.getElementsByTagName('form')[1];
+	var form = document.getElementsByTagName('form')[1];
 	// extract username and password fields
-	for(x in response.form.elements){
-		var field = response.form.elements[x]; 
+	for(x in form.elements){
+		var field = form.elements[x]; 
 		if(field.type == 'text'){
 			// username field
 			response.usernameField = field;
@@ -96,7 +96,7 @@ function getNetLoginForm(document){
 		}
 		if(field.name == 'submit'){
 			// hack: form.submit() only works when there's no element named 'submit'
-			field.name = 'btnSubmit';
+			response.submit = field;
 		}
 	}
 	return response;

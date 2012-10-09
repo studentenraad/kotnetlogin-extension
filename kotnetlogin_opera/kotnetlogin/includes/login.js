@@ -1,4 +1,27 @@
+///==UserScript==
+//@include *://*.kuleuven.be/*
+//@include *://*.groept.be/*
+//@include *://limo.libis.be/*
+//@include *://*.hubrussel.be/*
+//@include *://*.katho.be/*
+//@include *://*.khbo.be/*
+//@include *://*.khleuven.be/*
+//@include *://*.khlim.be/*
+//@include *://*.lessius.eu/*
+//@include *://*.wenk.be/*
+//@include *://*.khk.be/*
+//@include *://*.kahosl.be/*
+//==/UserScript==
+
 // Mapping between login page identifier and the url
+var urls = {
+	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
+	'kuleuven_via_stuiterproxy':/^https:\/\/stuiterproxy\.kuleuven\.be\/idp\/view\/,DanaInfo=idp\.kuleuven\.be,SSL\+login\.htm$/,
+	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
+	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/
+};
+
+//Mapping between login page identifier and the url
 var urls = {
 	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/,
 	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
