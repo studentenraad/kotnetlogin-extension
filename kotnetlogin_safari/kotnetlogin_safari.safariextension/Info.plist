@@ -73,6 +73,7 @@
 				<string>*.wenk.be</string>
 				<string>*.khk.be</string>
 				<string>*.kahosl.be</string>
+				<string>*.madfi2.be</string>
 			</array>
 			<key>Include Secure Pages</key>
 			<true/>
