@@ -11,30 +11,41 @@
 //@include *://*.wenk.be/*
 //@include *://*.khk.be/*
 //@include *://*.kahosl.be/*
+//@include *://*.madfi2.be/*
 //==/UserScript==
 
 // Mapping between login page identifier and the url
 var urls = {
-	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
-	'kuleuven_via_stuiterproxy':/^https:\/\/stuiterproxy\.kuleuven\.be\/idp\/view\/,DanaInfo=idp\.kuleuven\.be,SSL\+login\.htm$/,
-	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
-	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/
-};
-
-//Mapping between login page identifier and the url
-var urls = {
-	'netlogin':/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/,
-	'kuleuven':/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
-	'groept':/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
+	'netlogin':		/^https:\/\/netlogin\.kuleuven\.be\/cgi-bin\/wayf2\.pl/,
+	'kuleuven':		/^https:\/\/idp\.kuleuven\.be\/idp\/view\/login\.htm$/,
+	'groept':		/^https:\/\/idp\.groept\.be\/idp\/view\/login\.htm$/,
+	'hubrussel':	/^https:\/\/idp\.hubrussel\.be\/idp\/view\/login\.htm$/,
+	'katho':		/^https:\/\/idp\.katho\.be\/idp\/view\/login\.htm$/,
+	'khbo':			/^https:\/\/idp\.khbo\.be\/idp\/view\/login\.htm$/,
+	'khlim':		/^https:\/\/idp\.khlim\.be\/idp\/view\/login\.htm$/,
+	'lessius':		/^https:\/\/idp\.lessius\.eu\/idp\/view\/login\.htm$/,
+	'wenk':			/^https:\/\/idp\.wenk\.be\/idp\/view\/login\.htm$/,
+	'khk':			/^https:\/\/idp\.khk\.be\/idp\/view\/login\.htm$/,
+	'kahosl':		/^https:\/\/idp\.kahosl\.be\/idp\/view\/login\.htm$/,
+	'madfi2':		/^https:\/\/idp\.madfi2\.be\/idp\/view\/login\.htm$/,
 	'kuleuven_via_stuiterproxy':/^https:\/\/stuiterproxy\.kuleuven\.be\/idp\/view\/,DanaInfo=idp\.kuleuven\.be,SSL\+login\.htm$/
 };
 
 // Mapping between login page identifier and the method that extracts the form
 var forms = {
-	'netlogin':getNetLoginForm,
-	'kuleuven':getKuleuvenForm,
-	'groept':getGroepTForm,
-	'kuleuven_via_stuiterproxy':getKuleuvenForm
+	'netlogin':		getNetLoginForm,
+	'kuleuven':		getKuleuvenIDPForm,
+	'groept':		getAssociationIDPForm,
+	'hubrussel':	getAssociationIDPForm,
+	'katho':		getAssociationIDPForm,
+	'khbo':			getAssociationIDPForm,
+	'khlim':		getAssociationIDPForm,
+	'lessius':		getAssociationIDPForm,
+	'wenk':			getAssociationIDPForm,
+	'khk':			getAssociationIDPForm,
+	'kahosl':		getAssociationIDPForm,
+	'madfi2':		getAssociationIDPForm,
+	'kuleuven_via_stuiterproxy':getKuleuvenIDPForm
 };
 
 // Login
@@ -49,6 +60,7 @@ function login(document,settings){
 			if(document.location.href.match(urls[id])) {
 				// Login
 				page = id;
+				break;
 			}
 		}
 		// If page is still false, we're not on a login page. Exit.
@@ -74,7 +86,7 @@ function login(document,settings){
 }
 
 // Get form and input fields from the KULeuven shibboleth page
-function getKuleuvenForm(document){
+function getKuleuvenIDPForm(document){
 	// return null if password was incorrect
 	if(document.getElementById('username.errors')){
 		return null;
@@ -88,7 +100,7 @@ function getKuleuvenForm(document){
 }
 
 // Get form and input fields from the GroepT shibboleth page
-function getGroepTForm(document){
+function getAssociationIDPForm(document){
 	// return null if password was incorrect
 	if(document.getElementById('username.errors')){
 		return null;

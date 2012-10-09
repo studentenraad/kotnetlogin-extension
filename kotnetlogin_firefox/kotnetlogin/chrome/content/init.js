@@ -10,7 +10,7 @@ var UrlObserver = {
 	
 	// only filter applicable urls
 	var host = event.originalTarget.location.host;
-	if (host.match(/(.*.kuleuven.be|.*.groept.be|limo.libis.be|.*.hubrussel.be|.*.katho.be|.*.khbo.be|.*.khleuven.be|.*.khlim.be|.*.lessius.eu|.*.wenk.be|.*.khk.be|.*.kahosl.be)/) == null) {
+	if (host.match(/(.*.kuleuven.be|.*.groept.be|limo.libis.be|.*.hubrussel.be|.*.katho.be|.*.khbo.be|.*.khleuven.be|.*.khlim.be|.*.lessius.eu|.*.wenk.be|.*.khk.be|.*.kahosl.be|.*.madfi2.be)/) == null) {
 		// we are not an a page of the KULeuven Association, exit
 		return;
 	}
