@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" id="http://kotnetloginextension.googlecode.com" version="2.0.0" defaultlocale="en">
+<widget xmlns="http://www.w3.org/ns/widgets" id="http://kotnetloginextension.googlecode.com" version="2.0.1" defaultlocale="en">
 	<name short="Kotnet Login">Kotnet Login Browser Extension</name>
 	<description xml:lang="en">Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</description>
 	<description xml:lang="nl">Kotnet Login is een extensie die u automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...</description>

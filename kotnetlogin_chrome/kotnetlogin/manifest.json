@@ -2,7 +2,7 @@
   "name": "Kotnet Login",
   "manifest_version": 2,
   "update_url": "https://kotnetloginextension.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage_url":"https://kotnetloginextension.googlecode.com",
   "description": "__MSG_manifest_extensionDescription__",
   
