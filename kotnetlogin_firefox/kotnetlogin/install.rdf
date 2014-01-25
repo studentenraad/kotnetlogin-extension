@@ -2,7 +2,7 @@
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 	<Description about="urn:mozilla:install-manifest">
 		<em:id>{C0D74264-E30B-47E5-B17B-57F0031891BA}</em:id>
-		<em:version>2.0.1</em:version>
+		<em:version>2.0.2 BETA</em:version>
 		
 		<em:localized>
 			<Description>
@@ -14,7 +14,8 @@
 				<em:developer>Albert Jorissen</em:developer>
 				<em:developer>Peter Mylemans</em:developer>
 				<em:developer>Stijn Vermeeren</em:developer>
-				<em:homepageURL>https://kotnetloginextension.googlecode.com</em:homepageURL>
+				<em:developer>Elias Van Deun</em:developer>
+				<em:homepageURL>https://eliasvandeun-associatielogin.googlecode.com</em:homepageURL>
 			</Description>
 		</em:localized>
 		<em:localized>
@@ -27,7 +28,8 @@
 				<em:developer>Albert Jorissen</em:developer>
 				<em:developer>Peter Mylemans</em:developer>
 				<em:developer>Stijn Vermeeren</em:developer>
-				<em:homepageURL>https://kotnetloginextension.googlecode.com</em:homepageURL>
+				<em:developer>Elias Van Deun</em:developer>
+				<em:homepageURL>https://eliasvandeun-associatielogin.googlecode.com</em:homepageURL>
 			</Description>
 		</em:localized>
 		<em:name>Kotnet Login</em:name>
@@ -37,10 +39,10 @@
 		<em:developer>Albert Jorissen</em:developer>
 		<em:developer>Peter Mylemans</em:developer>
 		<em:developer>Stijn Vermeeren</em:developer>
-		<em:homepageURL>https://kotnetloginextension.googlecode.com</em:homepageURL>
+		<em:homepageURL>https://eliasvandeun-associatielogin.googlecode.com</em:homepageURL>
 		
 		<em:optionsURL>chrome://kotnetlogin/content/options.xul</em:optionsURL>
-		<em:updateURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/update.rdf</em:updateURL>
+		<em:updateURL>https://eliasvandeun-associatielogin.googlecode.com/hg/kotnetlogin_firefox/update.rdf</em:updateURL>
 		<em:type>2</em:type>
 		<em:iconURL>chrome://kotnetlogin/content/images/kotnetlogin.png</em:iconURL>
 
