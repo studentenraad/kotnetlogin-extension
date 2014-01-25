@@ -7,9 +7,9 @@ function redirect(document,settings,locale){
 	if (document.location.href == 'http://pre-netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/campusnet/' || document.location.href == 'https://netlogin.kuleuven.be/cgi-bin/netlogout.pl') {
 		// Redirect to login page of the institute in the settings
 		if (locale == 'nl') {
-			document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf2.pl?inst=' + settings.institute + '&lang=nl';
+			document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf2.pl?inst=kuleuven&lang=nl';
 		} else {
-			document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf2.pl?inst=' + settings.institute + '&lang=en';
+			document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf2.pl?inst=kuleuven&lang=en';
 		}
 	}
 
