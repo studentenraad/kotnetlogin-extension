@@ -1,9 +1,9 @@
 {
   "name": "Kotnet Login",
   "manifest_version": 2,
-  "update_url": "https://kotnetloginextension.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
-  "version": "2.0.1",
-  "homepage_url":"https://kotnetloginextension.googlecode.com",
+  "update_url": "https://eliasvandeun-associatielogin.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
+  "version": "2.0.2 BETA",
+  "homepage_url":"https://eliasvandeun-associatielogin.googlecode.com",
   "description": "__MSG_manifest_extensionDescription__",
   
   "background": {
