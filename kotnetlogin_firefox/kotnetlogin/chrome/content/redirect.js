@@ -4,7 +4,7 @@
 //locale: the current locale string (eg. 'en', 'nl')
 function redirect(document,settings,locale){
 	// Redirect to login/logout page when visiting netlogin on campusnet or kotnet
-	if (document.location.href == 'http://pre-netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/campusnet/' || document.location.href == 'https://netlogin.kuleuven.be/cgi-bin/netlogout.pl') {
+	if (document.location.href == 'http://pre-netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/' || document.location.href == 'https://netlogin.kuleuven.be/campusnet/' || document.location.href == 'https://netlogin.kuleuven.be/cgi-bin/netlogout.pl' || document.location.href == 'http://netlogin.kuleuven.be/' || document.location.href == 'http://netlogin.kuleuven.be/campusnet/' || document.location.href == 'http://netlogin.kuleuven.be/cgi-bin/netlogout.pl') {
 		// Redirect to login page of the institute in the settings
 		if (locale == 'nl') {
 			document.location.href = 'https://netlogin.kuleuven.be/cgi-bin/wayf2.pl?inst=kuleuven&lang=nl';
