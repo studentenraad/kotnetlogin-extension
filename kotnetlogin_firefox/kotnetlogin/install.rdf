@@ -7,8 +7,8 @@
 		<em:localized>
 			<Description>
 				<em:locale>en</em:locale>
-				<em:name>Kotnet Login</em:name>
-				<em:description>Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</em:description>
+				<em:name>Kotnet Login (Associationlogin)</em:name>
+				<em:description>Kotnet Login (Associationlogin) is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</em:description>
 				<em:creator>Kotnet Login</em:creator>
 				<em:developer>Siemon Kauffmann</em:developer>
 				<em:developer>Albert Jorissen</em:developer>
@@ -21,8 +21,8 @@
 		<em:localized>
 			<Description>
 				<em:locale>nl</em:locale>
-				<em:name>Kotnet Login</em:name>
-				<em:description>Kotnet Login is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...</em:description>
+				<em:name>Kotnet Login (Associatielogin)</em:name>
+				<em:description>Kotnet Login (Associatielogin) is een extensie die je automatisch inlogt op sites van de KULeuven zoals bv. Kotnet, Toledo...</em:description>
 				<em:creator>Kotnet Login</em:creator>
 				<em:developer>Siemon Kauffmann</em:developer>
 				<em:developer>Albert Jorissen</em:developer>
@@ -32,13 +32,14 @@
 				<em:homepageURL>https://eliasvandeun-associatielogin.googlecode.com</em:homepageURL>
 			</Description>
 		</em:localized>
-		<em:name>Kotnet Login</em:name>
-		<em:description>Kotnet Login is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</em:description>
+		<em:name>Kotnet Login (Associationlogin)</em:name>
+		<em:description>Kotnet Login (Associationlogin) is a browser extension that provides automatic login for websites of the KULeuven such as Kotnet, Toledo...</em:description>
 		<em:creator>Kotnet Login</em:creator>
 		<em:developer>Siemon Kauffmann</em:developer>
 		<em:developer>Albert Jorissen</em:developer>
 		<em:developer>Peter Mylemans</em:developer>
 		<em:developer>Stijn Vermeeren</em:developer>
+		<em:developer>Elias Van Deun</em:developer>
 		<em:homepageURL>https://eliasvandeun-associatielogin.googlecode.com</em:homepageURL>
 		
 		<em:optionsURL>chrome://kotnetlogin/content/options.xul</em:optionsURL>
