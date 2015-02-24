@@ -24,18 +24,15 @@ function redirect(document,settings,locale){
 		document.location.href = 'https://cygnus.cc.kuleuven.be/webapps/asso-toledo-bb_bb60/nosession/login.jsp?config=e';
 	}
 
-//	// Redirect to login page when visiting LIMO
-//	if (document.location.href == 'http://limo.libis.be/primo_library/libweb/action/search.do?vid=KULeuven&fromLogin=true' || document.location.href == 'http://limo.libis.be/primo_library/libweb/action/search.do?vid=KULeuven') {
-//	document.location.href = 'https://pds.libis.be/pds?func=load-login&institute=' + settings.institute.toUpperCase() + '&calling_system=primo&url=http://limo.libis.be/primo_library/libweb/action/login.do?targetURL=http://limo.libis.be/primo_library/libweb/action/search.do?vid=KULeuven';
-//	}
-
-	// Redirect to login page when visiting toledo via the kuleuven stuiterproxy
-	if (document.location.href == 'https://stuiterproxy.kuleuven.be/,DanaInfo=toledo.kuleuven.be,SSO=U+' || document.location.href == 'https://stuiterproxy.kuleuven.be/,DanaInfo=www.toledo.kuleuven.be,SSO=U+') {
-		document.location.href = 'https://stuiterproxy.kuleuven.be/webapps/asso-toledo-bb_bb60/nosession/,DanaInfo=cygnus.cc.kuleuven.be,SSL+login.jsp?config=a';
+	// Redirect to KU Leuven LIMO-version
+	if (document.location.href == 'http://limo.libis.be/index.html') {
+	document.location.href = 'http://limo.libis.be/primo_library/libweb/action/search.do?vid=KULeuven' ;
 	}
+	
+	// Redirect to login page when visiting LIMO
+	//if (document.location.host == 'https://leuven-primo.hosted.exlibrisgroup.com/pds?func=load-login&institute=KUL') {
+	//document.location.href = 'https://leuven-primo.hosted.exlibrisgroup.com/pds?func=load-login&term=&institute=NEW_KULEUVEN_CENTRAL_IDP&calling_system=primo&url=http://limo.libis.be:80/primo_library/libweb/action/login.do?targetURL=http%3A%2F%2Flimo%2Elibis%2Ebe%2Fprimo%5Flibrary%2Flibweb%2Faction%2Fsearch%2Edo%3Fdscnt%3D0&' ;
+	//}
 
-//	// Redirect to login page when visiting LIMO via the kuleuven stuiterproxy
-//	if (document.location.href == 'https://stuiterproxy.kuleuven.be/primo_library/libweb/action/,DanaInfo=limo.libis.be+search.do?vid=KULeuven&fromLogin=true' || document.location.href == 'https://stuiterproxy.kuleuven.be/primo_library/libweb/action/,DanaInfo=limo.libis.be+search.do?vid=KULeuven') {
-//	document.location.href = 'https://stuiterproxy.kuleuven.be/,DanaInfo=pds.libis.be,SSL+pds?func=load-login&institute=' + settings.institute.toUpperCase() + '&calling_system=primo&url=http://limo.libis.be/primo_library/libweb/action/login.do?targetURL=http://limo.libis.be/primo_library/libweb/action/search.do?vid=KULeuven';
-//	}
+
 }
