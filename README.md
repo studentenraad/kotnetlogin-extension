@@ -17,7 +17,7 @@ Feature requests are a different thing: You're free to make suggestions (please 
 If you really want a feature, you might want to do it yourself.
 So if you would like to contribute, just send us a pull request!
 
-## [License](https://github.com/studentenraad/kotnetlogin-extension/blob/master/LICENSE.md)
+## [License](https://github.com/studentenraad/kotnetlogin-extension/blob/master/LICENSE)
 
 GNU GPL v3
 
