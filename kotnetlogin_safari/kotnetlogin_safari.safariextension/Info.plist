@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.1</string>
+	<string>2.0.5</string>
 	<key>CFBundleVersion</key>
 	<string>11</string>
 	<key>Chrome</key>
@@ -82,8 +82,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_safari/updates.plist</string>
+	<string>https://raw.githubusercontent.com/studentenraad/kotnetlogin-extension/master/kotnetlogin_safari/updates.plist</string>
 	<key>Website</key>
-	<string>https://kotnetloginextension.googlecode.com</string>
+	<string>https://github.com/studentenraad/kotnetlogin-extension</string>
 </dict>
 </plist>

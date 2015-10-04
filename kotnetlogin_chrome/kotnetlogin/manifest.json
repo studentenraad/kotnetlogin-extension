@@ -1,9 +1,9 @@
 {
   "name": "Kotnet Login (Associatielogin)",
   "manifest_version": 2,
-  "update_url": "https://eliasvandeun-associatielogin.googlecode.com/hg/kotnetlogin_chrome/updates.xml",
-  "version": "2.0.4",
-  "homepage_url":"https://eliasvandeun-associatielogin.googlecode.com",
+  "update_url": "https://raw.githubusercontent.com/studentenraad/kotnetlogin-extension/master/kotnetlogin_chrome/updates.xml",
+  "version": "2.0.5",
+  "homepage_url":"https://github.com/studentenraad/kotnetlogin-extension",
   "description": "__MSG_manifest_extensionDescription__",
   
   "background": {
