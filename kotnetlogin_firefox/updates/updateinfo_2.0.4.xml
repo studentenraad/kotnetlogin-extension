@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
-<h2>Kotnet Login 2.0.5</h2>
+<h2>Kotnet Login 2.0.4</h2>
 <h3>New Features</h3>
 <ul>
-<li>Updates the redirect process of Kotnet-login (inst=kuleuven-campusnet)</li>
+<li>Adds redirect for prenetlogin.icts.kuleuven.be</li>
+<li>Change all logins to association login</li>
 </ul>
 </html>
