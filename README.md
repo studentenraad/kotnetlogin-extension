@@ -17,7 +17,25 @@ Feature requests are a different thing: You're free to make suggestions (please 
 If you really want a feature, you might want to do it yourself.
 So if you would like to contribute, just send us a pull request!
 
+## Build from source
+
+### Install dependencies
+
+Dependencies: `make`, `zip`, `chromium`.
+
+```sh
+# Debian
+sudo apt-get install make zip chromium
+```
+
+### Create signing key
+
+Place your signing key in `lib/sigkey.pem` file.
+
+### Build
+
+Use `make` to build the addons.
+
 ## [License](https://github.com/studentenraad/kotnetlogin-extension/blob/master/LICENSE)
 
 GNU GPL v3
-
