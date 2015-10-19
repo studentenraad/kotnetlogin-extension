@@ -6,6 +6,21 @@
 			<RDF:Seq>
 				<RDF:li>
 					<RDF:Description>
+						<em:version>2.0.6</em:version>
+						<em:targetApplication>
+							<RDF:Description>
+								<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+								<em:minVersion>3.0</em:minVersion>
+								<em:maxVersion>35.*</em:maxVersion>
+								<em:updateLink>https://github.com/studentenraad/kotnetlogin-extension/releases/download/2.0.6/kotnetlogin.xpi</em:updateLink>
+								<em:updateHash>sha1:d6e94bd0105d36cd9af794ccef517a294dc1fdb9</em:updateHash>	
+								<em:updateInfoURL>https://raw.githubusercontent.com/studentenraad/kotnetlogin-extension/master/kotnetlogin_firefox/updates/updateinfo_2.0.6.xml</em:updateInfoURL>
+							</RDF:Description>
+						</em:targetApplication>
+					</RDF:Description>
+				</RDF:li>
+				<RDF:li>
+					<RDF:Description>
 						<em:version>2.0.5</em:version>
 						<em:targetApplication>
 							<RDF:Description>
@@ -13,7 +28,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>35.*</em:maxVersion>
 								<em:updateLink>https://github.com/studentenraad/kotnetlogin-extension/releases/download/2.0.5/kotnetlogin-2.0.5.xpi</em:updateLink>
-								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>	
+								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>
 								<em:updateInfoURL>https://raw.githubusercontent.com/studentenraad/kotnetlogin-extension/master/kotnetlogin_firefox/updates/updateinfo_2.0.5.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -28,7 +43,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>35.*</em:maxVersion>
 								<em:updateLink>https://github.com/studentenraad/kotnetlogin-extension/releases/download/v2.0.4/kotnetlogin_firefox_2.0.4.xpi</em:updateLink>
-								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>	
+								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>
 								<em:updateInfoURL>https://raw.githubusercontent.com/studentenraad/kotnetlogin-extension/master/kotnetlogin_firefox/updates/updateinfo_2.0.4.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -43,7 +58,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>35.*</em:maxVersion>
 								<em:updateLink>https://www.dropbox.com/s/ixt5v69ow5q1r6l/kotnetlogin_firefox_2.0.3.xpi?dl=1</em:updateLink>
-								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>	
+								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>
 								<em:updateInfoURL>https://eliasvandeun-associatielogin.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_2.0.3.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -58,7 +73,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://www.dropbox.com/s/o2qfwya5908sfi9/kotnetlogin_firefox_2.0.2BETA.xpi</em:updateLink>
-								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>	
+								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>
 								<em:updateInfoURL>https://eliasvandeun-associatielogin.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_2.0.2.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -73,7 +88,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_2.0.1.xpi</em:updateLink>
-								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>	
+								<em:updateHash>sha1:b11f5d3653f422241fa35f0fc1fd97c893fbadf5</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_2.0.1.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -88,7 +103,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_2.0.0.xpi</em:updateLink>
-								<em:updateHash>sha1:edc3f14fd9c39bf02ce790814f3295bf37af763a</em:updateHash>	
+								<em:updateHash>sha1:edc3f14fd9c39bf02ce790814f3295bf37af763a</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_2.0.0.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -103,7 +118,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.9.3.1.xpi</em:updateLink>
-								<em:updateHash>sha1:579a3fe6c8237f61247b7cf8ceea36cd1351ad74</em:updateHash>	
+								<em:updateHash>sha1:579a3fe6c8237f61247b7cf8ceea36cd1351ad74</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.9.3.1.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -118,7 +133,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.9.3.xpi</em:updateLink>
-								<em:updateHash>sha1:381bdef5f149bdf147c0f3f17eb84f004fc646a0</em:updateHash>	
+								<em:updateHash>sha1:381bdef5f149bdf147c0f3f17eb84f004fc646a0</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.9.3.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -133,7 +148,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.9.2.xpi</em:updateLink>
-								<em:updateHash>sha1:c7fc6d717305ac7548dae3f43701469086803a21</em:updateHash>	
+								<em:updateHash>sha1:c7fc6d717305ac7548dae3f43701469086803a21</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.9.2.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -148,7 +163,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.9.xpi</em:updateLink>
-								<em:updateHash>sha1:b173b8575acb2a15c18bde6e18e3a14d6e8416ab</em:updateHash>	
+								<em:updateHash>sha1:b173b8575acb2a15c18bde6e18e3a14d6e8416ab</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.9.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -163,7 +178,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>17.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.8.xpi</em:updateLink>
-								<em:updateHash>sha1:7d9088d378eb36fc27b2b26b48127d6e01ee581a</em:updateHash>	
+								<em:updateHash>sha1:7d9088d378eb36fc27b2b26b48127d6e01ee581a</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.8.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -178,7 +193,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>15.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.7.1.xpi</em:updateLink>
-								<em:updateHash>sha1:d2d656d8655e7c7890b3c660faa4bd648b531314</em:updateHash>	
+								<em:updateHash>sha1:d2d656d8655e7c7890b3c660faa4bd648b531314</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.7.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -193,7 +208,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>10.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.6.4.xpi</em:updateLink>
-								<em:updateHash>sha1:477efec2a5b36064d1ecfd6229f4021e5c3e3f7c</em:updateHash>	
+								<em:updateHash>sha1:477efec2a5b36064d1ecfd6229f4021e5c3e3f7c</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.6.4.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -208,7 +223,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>10.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.6.3.xpi</em:updateLink>
-								<em:updateHash>sha1:a91d297ba2a03057fe3388522302776d0992ef2d</em:updateHash>	
+								<em:updateHash>sha1:a91d297ba2a03057fe3388522302776d0992ef2d</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.6.3.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -223,7 +238,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>6.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.6.2.xpi</em:updateLink>
-								<em:updateHash>sha1:27fca745e4950eb8354feea2b3c01ac16041e224</em:updateHash>	
+								<em:updateHash>sha1:27fca745e4950eb8354feea2b3c01ac16041e224</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.6.2.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -238,7 +253,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>6.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.6.1.xpi</em:updateLink>
-								<em:updateHash>sha1:7f6ec585a356e4e96556daccfce8f13ceb063f3f</em:updateHash>	
+								<em:updateHash>sha1:7f6ec585a356e4e96556daccfce8f13ceb063f3f</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.6.1.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -253,7 +268,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>5.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_firefox_1.6.xpi</em:updateLink>
-								<em:updateHash>sha1:2fa680a56c1de4ce068135a9c0e18194c6ceb110</em:updateHash>	
+								<em:updateHash>sha1:2fa680a56c1de4ce068135a9c0e18194c6ceb110</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.6.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -268,7 +283,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>5.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_1.0.2.xpi</em:updateLink>
-								<em:updateHash>sha1:cbbc5f2df8f734a23e126daa35a3a1fc6d0e007c</em:updateHash>	
+								<em:updateHash>sha1:cbbc5f2df8f734a23e126daa35a3a1fc6d0e007c</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.0.2.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -284,7 +299,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>4.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_1.0.1.xpi</em:updateLink>
-								<em:updateHash>sha1:83d3c47d9d8354429211a3be59ad9a4efda9a0fc</em:updateHash>	
+								<em:updateHash>sha1:83d3c47d9d8354429211a3be59ad9a4efda9a0fc</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.0.1.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
@@ -299,7 +314,7 @@
 								<em:minVersion>3.0</em:minVersion>
 								<em:maxVersion>3.6.*</em:maxVersion>
 								<em:updateLink>https://kotnetloginextension.googlecode.com/files/kotnetlogin_1.0.0.xpi</em:updateLink>
-								<em:updateHash>sha1:56828a2e891d1b07785765d2847fa42317d1a531</em:updateHash>	
+								<em:updateHash>sha1:56828a2e891d1b07785765d2847fa42317d1a531</em:updateHash>
 								<em:updateInfoURL>https://kotnetloginextension.googlecode.com/hg/kotnetlogin_firefox/updates/updateinfo_1.0.0.xml</em:updateInfoURL>
 							</RDF:Description>
 						</em:targetApplication>
