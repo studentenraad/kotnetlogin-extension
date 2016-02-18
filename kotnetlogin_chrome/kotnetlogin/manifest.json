@@ -2,7 +2,7 @@
   "name": "Kotnet Login (Associatielogin)",
   "manifest_version": 2,
   "update_url": "https://raw.githubusercontent.com/studentenraad/kotnetlogin-extension/master/kotnetlogin_chrome/updates.xml",
-  "version": "2.0.5",
+  "version": "2.0.7",
   "homepage_url":"https://github.com/studentenraad/kotnetlogin-extension",
   "description": "__MSG_manifest_extensionDescription__",
   
